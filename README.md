@@ -199,7 +199,7 @@ CBD shield are a modern health brand producing healing products using natural in
 
     - This website will use a fixed navigation bar that hides the menu items unless the user is scrolling upwards, which will then cause the navbar to display itself in a smooth animation. The reason for this UI decision is to avoid hiding any content and cluttering of the page enhancing the UX.
 
-        - The main navbar will collapse on medium screen sizes into a hamburger menu, but the functionality will remain the same.
+    - The main navbar will collapse on medium screen sizes into a hamburger menu, but the functionality will remain the same.
 
     - There will also be a sub navigation menu included that will feature a search bar allowing the user to immediately search the sites products.
 
@@ -243,3 +243,38 @@ CBD shield are a modern health brand producing healing products using natural in
 
 - [Mobile website view](#)
 
+## Design
+
+### Colour Scheme
+
+- The colour scheme for this website contains three colours a main, secondary and accent colour, there will also be darker tones of these colours to improve accessibility. There will also be typical success and error colours used such as variations of green and red. The three main colours used within this site are all colours taken from the brands logo, this keeps the website on-brand and professional looking. There will also be a heavy emphasis on using white space, this is to give a clinical feel to the website in a positive way. The idea behind this is to increase users trust in the products by portraying that they are created by medical professionals, which they are.
+
+- Feigoa (#9AE17A) - Primary Colour - A mid tone pale green that features as the main colour in the logo. This green relates well with the type of products being sold and adds a fun, enjoyable tone to the colour palette.
+
+- Oracle (#327270) - Secondary Colour - A blue, grey and green toned colour that works exceptionally well alongside the primary colour. This colour will be used to break up sections and add contrast to important features making them stand out to the user.
+
+- Fern (#6BBA62) - Accent Colour/Primary Alternate Colour - A slightly darker shade of Feigoa, this colour will be used to increase readability of copy to ensure accessability is high. As well as this it will also add slight but effective contrast when used alongside the primary colour.
+
+---
+
+### Typography
+
+- There will be two fonts used throughout the website. The font Poiret One will be used as the site title font and logo font, however if fitting, it may also be used for certain body elements such as buttons. The body font used will be Raleway which has many similar aspects to the title font since they are both Sans-serif with art-deco styles making them work extremely well together.
+
+- **Poiret One** - A fresh decorative geometric grotesque with a hint of Art Deco and c‘onstructivism. Poiret One is a unique typeface with light forms and pure elegance based on geometric forms.
+
+- **Raleway** - Raleway is an elegant sans-serif typeface, designed in a single thin weight. It is a display face that features both old style and lining numerals, as well as a stylistic alternate inspired by more geometric sans-serif typefaces.
+
+---
+
+### Logo
+
+- The logo for this project was generated through [Hatchful](https://hatchful.shopify.com/) for the initial design, I then customised the font and colours. The colours were chosen to further enhance a customers understanding of the brands values focusing on using natural ingredients in a sustainable way which is why the green variants are so important. This is also the reason behind the seedling sprouting used in the logo which further evokes these emotions. This then led to the choice of an art-deco style font which adds a clean, modern and stylish feel to the logo as well as giving the brand a sought after luxury feel.
+
+---
+
+### Imagery
+
+- Imagery will be featured throughout this website in such features as hero's, cta's, products, faq/about, and general content sections. There will be a mix of imagery subjects such as athletes and sportspeople, general lifestyle, and environmental subject matters. Other than specific product images all other images will feature a person as a subject, whether this be using the products, lifestyle images of desireable subjects, or athletes taking part in their sport. The reason for using these types of images is to make the use of the products relatable to the consumer, as well as displaying the varied healing/recovery uses of the products.
+
+- Icons will be featured throughout this site with minimalist use. The main section featuring icons will be a category card display that uses icons to portray the different uses of those products. Icons may also feature to add small details of illustration to sections as well as in some hover effects.
