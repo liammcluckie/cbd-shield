@@ -106,3 +106,140 @@ CBD shield are a modern health brand producing healing products using natural in
 ---
 
 ### User Centered Design
+
+#### Strategy
+
+- The main goal of this website is to convert visitors into customers and frequent users with accounts. Due to products produced by CBD Shield there will be a lot of detailed information on how the products benefit users, why using CBD is so beneficial, who should use these types of products and the different types of CBD products and their benefits. This content will be displayed using high quality, professional imagery, icons and copy. 
+
+- To achieve the sites goals the most important information will be displayed on the landing page whilst being careful to not overload the user. The features and UI will play a huge role in displaying this information to the user in the best way possible making use of icons to portray categories, imagery of products in use and eye catching call to actions that direct users to more in depth information.
+
+- One of the most important pages on the site that will be used to convoy necessary information to users will be through the sites FAQ page that will include detailed questions that cover all aspects of CBD. This page will include interactive functionality whilst keeping with the sites clean and modern UI.
+
+- The ideal steps that a new user would take are the following;
+
+    - Explore the websites landing page, reading the informative information about the business and products.
+
+    - Look through the landing pages imagery and call to actions.
+
+    - Follow the call to actions either to products or more in depth information.
+
+    - Navigate to the FAQ page to further enhance knowledge of the product.
+    
+    - Move onto the events page to further enhance their knowledge of this type of business and it's products.
+
+    - Sign up to the newsletter to receive offers and more information about these products.
+
+    - Through informative content discover the best product for their needs.
+
+    - Purchase said products and create an account to save order details.
+
+    - Remain a regular user to the site due to an enjoyable website experience and a connection made with the brand through this.
+
+---
+
+#### Scope | Trade Off
+
+- **The main features and content in the initial design plan that are of the highest priority are;**
+
+    - Fully responsive website regardless of viewing device size.
+
+    - Fixed navigation bar.
+
+    - Detailed information/about sections.
+
+    - Detail product descriptions.
+
+    - New/special product carousels.
+
+    - Eye catching CTA's using imagery and copy. 
+
+    - Allow users to create accounts and have full CRUD functionality over this.
+
+    - A secure payment system.
+
+    - Validated and error free forms or various types.
+
+    - Search functionality of products on the website.
+
+    - The ability for users to leave reviews for products and allow these users to have CRUD functionality over their own reviews.
+
+    - Testimonials of the brand and products.
+
+    - This website will include pages such as;
+        - Homepage
+        - Events Page
+        - Products page - organised into product types/categories
+        - FAQ Page
+        - Profile page
+        - Register/login page
+        - Contact page
+        - Relevant purchasing pages - cart, checkout etc
+
+- **The features and content in the initial design plan that are of a lower priority and may not be including in this build are;**
+
+    - Related/recommended products to be displayed whilst viewing certain products.
+
+    - A blog page that contains all the latest news.
+
+    - A gallery section containing products and these products in use.
+
+    - Multiple product images on product pages.
+    
+    - The ability for users to add further information to their profile page such as preferences, images, bio descriptions etc.
+
+    - A functioning and correct Instagram feed display showing the brands most up to date posts.
+
+---
+
+#### Structure
+
+- The basic structure of the website is;
+
+- Header/Navigation - *Top Level*
+
+    - This website will use a fixed navigation bar that hides the menu items unless the user is scrolling upwards, which will then cause the navbar to display itself in a smooth animation. The reason for this UI decision is to avoid hiding any content and cluttering of the page enhancing the UX.
+
+        - The main navbar will collapse on medium screen sizes into a hamburger menu, but the functionality will remain the same.
+
+    - There will also be a sub navigation menu included that will feature a search bar allowing the user to immediately search the sites products.
+
+    - The header section will include and eye catching hero image alongside information, snappy hero text that acts as a call to action. This feature will include well thought out white space and on brand colours.
+
+- Body - *Main Page Elements*
+
+    - There will be a combination of copy and images used as CTA's and information conveying sections.
+
+    - The landing page will feature a grid layout that makes use of cards with product categories that act as links to the category selected. Relevant icons will also be used on these cards as a way to further enhance the users understanding of the products.
+
+    - The Products page overview will be in a typical e-commerce grid layout that includes some minimal product information such as name and price.
+
+    - Individual product pages will include a main product image and a short description with price at the top level. Then further down there will be a detailed description, further images and product reviews.
+
+    - The pages specific to using forms will have minimal to none additional content in order for the forms to be the main focus point.
+
+    - The layout of the FAQ page will be in a accordion style with the FAQ title being displayed alongside an icon, then once selected the FAQ copy will be displayed.
+
+    - The events page will make use of alternative card layouts with aesthetically pleasing animation effects.
+
+- Footer - *Bottom Level*
+
+    - Newsletter sign up form displayed within the footer but above all other content as top priority.
+
+    - A repeated navigation menu to reduce the need for the user to scroll up to continue navigating.
+
+    - Social media links placed here to ensure the user does not navigate away from the page to soon.
+
+    - Copyright and legal information placed here.
+    
+    - The websites logo to reinforce the users awareness of the company.
+
+---
+
+#### Wireframes
+
+- [Desktop website view](#)
+
+- [Tablet website view](#)
+
+- [Mobile website view](#)
+
