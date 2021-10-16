@@ -21,6 +21,8 @@
     --primary: #9AE17A; /* Feigoa */
     --primary--dark: #6BBA62; /* Fern */
     --secondary: #327370; /* Oracle */
+    --white: #fff;
+    --body-color: #fbfefa;
     --title: "Poiret One", sans-serif;
     --body: "Raleway", sans-serif;
 }
@@ -29,7 +31,7 @@ body {
     font-family: var(--body);
     font-size: 16px;
     line-height: 1.5;
-    background: #fbfefa!important;
+    background: var(--body-color)!important;
 }
 
 body,html {
@@ -49,6 +51,7 @@ a {
     cursor: pointer;
     color: inherit!important;
     font-family: var(--body);
+    font-size: 1.75rem;
 }
 
 a:hover,
@@ -58,4 +61,98 @@ a:focus {
 
 img {
     max-width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Utilities */
+
+.bg--primary-dark {
+    background-color: var(--primary--dark);
+    background-image: url(../../media/line-in-motion.svg);
+}
+
+.button--link {
+    display: inline-block;
+    position: relative;
+    border-bottom: 2px solid var(--primary);
+    transition: all 250ms ease;
+}
+
+.button--link:before {
+    font-family: "Font Awesome 5 Free";
+    content: '\2192';
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 250ms ease-in-out;
+    color: red;
+}
+
+.button--link:hover,
+.button--link:focus {
+    text-indent: -20px;
+    padding: 0 2rem;
+    border-bottom-color: transparent;
+}
+
+.button--link:hover:before,
+.button--link:focus:before {
+    opacity: 1;
+    text-indent: 0px;
+}
+
+/* Home hero */
+
+.hero-row {
+    height: 100vh;
+}
+
+.hero-col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-hero {
+    background: url(../../media/home-hero.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.hero-product-image {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.hero-image {
+    border-radius: 8px;
+}
+
+.hero-product-border {
+    background-color: var(--white);
+    padding: 4rem;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.tagline {
+    color: var(--white);
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    width: 100%;
 }
