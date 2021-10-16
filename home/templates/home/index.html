@@ -2,5 +2,21 @@
 {% load static %}
 
 {% block content %}
-<h1 class="text-success">Hello World</h1>
+    <!-- Hero/Header -->
+    <div class="container-fluid">
+        <div class="row hero-row">
+            <div class="col-6 bg--primary-dark hero-col-left">
+                <div class="hero-product-image">
+                    <div class="hero-product-border text-center">
+                        <img src="../../../media/home-hero-product.jpg" alt="" class="hero-image">
+                        <a href="#" class="button--link">See Product</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 home-hero">
+                <h1 class="tagline">Caring For Your Body & Mind</h1>
+            </div>
+        </div>
+    </div>
+    <!-- End Hero/Header -->
 {% endblock %}
