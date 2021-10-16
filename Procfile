@@ -1,1 +1,1 @@
-web: python cbd_shield.py
+web: python cbd_shield.wsgi:application
