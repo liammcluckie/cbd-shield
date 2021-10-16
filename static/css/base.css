@@ -1,0 +1,61 @@
+/* Import Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Raleway&display=swap');
+
+/* Style Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+
+:root {
+    --primary: #9AE17A; /* Feigoa */
+    --primary--dark: #6BBA62; /* Fern */
+    --secondary: #327370; /* Oracle */
+    --title: "Poiret One", sans-serif;
+    --body: "Raleway", sans-serif;
+}
+
+body {
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.5;
+    background: #fbfefa!important;
+}
+
+body,html {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--title);
+}
+
+a {
+    text-decoration: none!important;
+    cursor: pointer;
+    color: inherit!important;
+    font-family: var(--body);
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
