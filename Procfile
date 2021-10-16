@@ -1,1 +1,1 @@
-web: python cbd_shield.wsgi:application
+web: gunicorn cbd_shield.wsgi:application
