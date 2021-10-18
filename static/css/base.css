@@ -116,6 +116,35 @@ img {
     text-indent: 0px;
 }
 
+/* Header/Nav */
+
+.navbar {
+    border-bottom: 2px solid var(--primary--dark);
+}
+
+.navbar-brand {
+    width: 20%;
+}
+
+.navbar-collapse {
+    flex-grow: unset!important;
+}
+
+.nav-link {
+    font-family: var(--title);
+    font-weight: bold;
+    letter-spacing: 0.75px;
+    font-size: 2.25rem;
+    color: var(--primary--dark)!important;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 1rem 2rem!important;
+    }
+}
+
+
 /* Home hero */
 
 .hero-row {
