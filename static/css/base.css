@@ -67,6 +67,12 @@ img {
     text-align: center;
 }
 
+@media (max-width: 320px) {
+    a {
+        font-size: 1.25rem;
+    }
+}
+
 /* Utilities */
 
 .bg--primary-dark {
@@ -82,8 +88,8 @@ img {
 }
 
 .button--link:before {
-    font-family: "Font Awesome 5 Free";
-    content: '\2192';
+    font-family: "FontAwesome";
+    content: '\f043';
     position: absolute;
     display: flex;
     align-items: center;
@@ -94,13 +100,13 @@ img {
     height: 100%;
     width: 40px;
     transition: all 250ms ease-in-out;
-    color: red;
+    color: var(--primary);
 }
 
 .button--link:hover,
 .button--link:focus {
     text-indent: -20px;
-    padding: 0 2rem;
+    padding: 0 2.75rem;
     border-bottom-color: transparent;
 }
 
@@ -137,6 +143,7 @@ img {
 
 .hero-image {
     border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* code from https://getcssscan.com/css-box-shadow-examples */
 }
 
 .hero-product-border {
@@ -144,6 +151,10 @@ img {
     padding: 4rem;
     margin: 0 auto;
     border-radius: 8px;
+}
+
+.hero-product-border > a {
+    margin-top: 2.75rem;
 }
 
 .tagline {
@@ -155,4 +166,48 @@ img {
     transform: translate(-50%, -50%);
     font-size: 3rem;
     width: 100%;
+    padding: 0 1.75rem;
+}
+
+@media (max-width: 1200px) {
+    .hero-product-border {
+        padding: 2rem;
+    }
+
+    .hero-product-border > a {
+        margin-top: 1.75rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .home-hero {
+        height: 50vh;
+        order: 1;
+    }
+
+    .hero-col-left {
+        height: 50vh;
+        order: 2;
+    }
+
+    .hero-product-border {
+        width: 55%;
+        padding: 1rem;
+    }
+
+    .hero-product-border > a {
+        margin-top: 0.75rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-product-border {
+        width: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-product-border {
+        width: 100%;
+    }
 }
