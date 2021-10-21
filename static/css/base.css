@@ -122,7 +122,7 @@ img {
     text-indent: 0px;
 }
 
-/* Header/Nav */
+/* Nav */
 
 .navbar {
     border-bottom: 2px solid var(--primary--dark);
@@ -134,19 +134,147 @@ img {
 
 .navbar-collapse {
     flex-grow: unset!important;
+    margin-right: 2rem;
 }
 
 .nav-link {
     font-family: var(--title);
     font-weight: bold;
     letter-spacing: 0.75px;
-    font-size: 2.25rem;
+    font-size: 1.75rem;
     color: var(--primary--dark)!important;
+}
+
+.nav-item {
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.nav-item:after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 5px;
+    background: var(--primary--dark);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-item:hover:after,
+.nav-item:focus:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.dropdown-menu {
+    border: 2px solid var(--secondary)!important;
+    padding: 0!important;
+}
+
+.dropdown-item-parent {
+    background-color: var(--body);
+    transition: all 0.3s ease;
+    color: var(--secondary)!important;
+    padding: 0.5rem;
+}
+
+.dropdown-item-parent:not(:last-of-type) {
+    border-bottom: 1.5px solid var(--secondary);
+}
+
+.dropdown-item-parent:hover,
+.dropdown-item-parent:focus {
+    background-color: var(--secondary);
+    color: var(--white) !important;
+}
+
+.dropdown-item {
+    background-color: transparent!important;
+    font-family: var(--title);
+    font-weight: bold;
+}
+
+.dropdown-divider {
+    color: var(--secondary);
+    height: 3px;
+    opacity: 1;
 }
 
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
         padding: 1rem 2rem!important;
+    }
+}
+
+/* Search box code from https://codepen.io/ShortCode/pen/jOrBeOw and customised for this project */
+
+.nav-search-box {
+    background-color: var(--primary);
+    border-radius: 8px;
+    position: relative;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.nav-search-input {
+    padding: 10px;
+    width: 80px;
+    height: 3.75rem;
+    background: none;
+    border: 4px solid var(--white);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    color: var(--white);
+    outline: none;
+    transition: .5s;
+}
+
+.nav-search-box:hover .nav-search-input{
+    width: 350px;
+    background: transparent;
+    border: 4px solid var(--white);
+    border-radius: 8px;
+}
+
+.fa-search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 26px;
+    color: var(--white);
+    transition: .2s;
+}
+
+.nav-search-box:hover .fa-search{
+    opacity: 0;
+    z-index: -1;
+}
+
+@media (max-width: 992px) {
+    .nav-search-box {
+        width: 100%;
+    }
+
+    .nav-search-input {
+        width: 100%;
+    }
+
+    .nav-search-box:hover .nav-search-input {
+        width: 100%;
+    }
+
+    .fa-search {
+        left: unset;
+        right: 5px;
+    }
+
+    .navbar-collapse {
+        margin-right: 0;
     }
 }
 
