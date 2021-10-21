@@ -51,12 +51,24 @@ a {
     cursor: pointer;
     color: inherit!important;
     font-family: var(--body);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 a:hover,
 a:focus {
     text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    a {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    a {
+        font-size: 1rem;
+    }
 }
 
 img {
@@ -65,12 +77,6 @@ img {
 
 .text-center {
     text-align: center;
-}
-
-@media (max-width: 320px) {
-    a {
-        font-size: 1.25rem;
-    }
 }
 
 /* Utilities */
@@ -144,11 +150,10 @@ img {
     }
 }
 
-
 /* Home hero */
 
 .hero-row {
-    height: 100vh;
+    height: 80vh;
 }
 
 .hero-col-left {
@@ -166,7 +171,7 @@ img {
 }
 
 .hero-product-image {
-    width: 75%;
+    width: 55%;
     margin: 0 auto;
 }
 
@@ -177,13 +182,13 @@ img {
 
 .hero-product-border {
     background-color: var(--white);
-    padding: 4rem;
+    padding: 2rem;
     margin: 0 auto;
     border-radius: 8px;
 }
 
 .hero-product-border > a {
-    margin-top: 2.75rem;
+    margin-top: 1.25rem;
 }
 
 .tagline {
@@ -198,24 +203,14 @@ img {
     padding: 0 1.75rem;
 }
 
-@media (max-width: 1200px) {
-    .hero-product-border {
-        padding: 2rem;
-    }
-
-    .hero-product-border > a {
-        margin-top: 1.75rem;
-    }
-}
-
 @media (max-width: 992px) {
     .home-hero {
-        height: 50vh;
+        height: 40vh;
         order: 1;
     }
 
     .hero-col-left {
-        height: 50vh;
+        height: 40vh;
         order: 2;
     }
 
@@ -232,6 +227,10 @@ img {
 @media (max-width: 700px) {
     .hero-product-border {
         width: 75%;
+    }
+
+    .hero-product-border > a {
+        margin-top: 0.75rem;
     }
 }
 
