@@ -3,7 +3,7 @@
 
 {% block content %}
     <!-- Hero/Header -->
-    <div class="container-fluid">
+    <section class="container-fluid">
         <div class="row hero-row">
             <div class="col-lg-6 col-md-12 bg--primary-dark hero-col-left">
                 <div class="hero-product-image">
@@ -18,6 +18,62 @@
                 <span role="img" aria-label="Close up of a person applying cbd oil to their hand"></span>
             </div>
         </div>
-    </div>
+    </section>
     <!-- End Hero/Header -->
+    <!-- Categories/About -->
+    <section>
+        <div class="container-fluid bg--secondary layout-pull">
+            <div class="row">
+                <div class="col-12 text-center white mt-5">
+                    <h2 class="categories-section-title">To help find what you're looking for, choose from one of the icons below</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Icons from https://icons8.com/ -->
+                    <ul class="category-icon-list">
+                        <li class="category-icon-list-item">
+                            <a href="#" class="category-icon-link">
+                                <img src="../../../media/health.png" class="category-icon" alt="Illustration depicting mental health">
+                                CBD For Health
+                            </a>
+                        </li>
+                        <li class="category-icon-list-item">
+                            <a href="#" class="category-icon-link">
+                                <img src="../../../media/beauty.png" class="category-icon" alt="Illustration depicting beauty">
+                                CBD For Beauty
+                            </a>
+                        </li>
+                        <li class="category-icon-list-item">
+                            <a href="" class="category-icon-link">
+                                <img src="../../../media/pain.png" class="category-icon" alt="Illustration depicting pain">
+                                CBD For Pain
+                            </a>
+                        </li>
+                        <li class="category-icon-list-item">
+                            <a href="" class="category-icon-link">
+                                <img src="../../../media/relaxation.png" class="category-icon" alt="Illustration depicting relaxation">
+                                CBD For Relaxation
+                            </a>
+                        </li>
+                        <li class="category-icon-list-item">
+                            <a href="" class="category-icon-link">
+                                <img src="../../../media/sport.png" class="category-icon" alt="Illustration depicting sport">
+                                CBD For Sport
+                            </a>
+                        </li>
+                        <li class="category-icon-list-item">
+                            <a href="" class="category-icon-link">
+                                <img src="../../../media/tea-coffee.png" class="category-icon" alt="Illustration of a tea or coffee cup">
+                                CBD Tea & Coffee
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Categories/About -->
 {% endblock %}
