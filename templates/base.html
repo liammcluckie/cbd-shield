@@ -40,64 +40,7 @@
 
 <body>
     <header>
-        <!-- Navbar code taken from https://getbootstrap.com/docs/5.1/components/navbar/ -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="../media/logo-transparent.png" alt="CBD Shield logo" class="logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <!-- Hamburger Icon -->
-                    <input type="checkbox" id="check" class="checkbox" hidden />
-                    <div class="hamburger-menu">
-                        <label for="check" class="menu">
-                            <span class="menu-line menu-line-1"></span>
-                            <span class="menu-line menu-line-2"></span>
-                            <span class="menu-line menu-line-3"></span>
-                        </label>
-                    </div>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Shop
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="dropdown-item-parent">
-                                    <a class="dropdown-item" href="#">Tincture</a>
-                                </li>
-                                <li class="dropdown-item-parent">
-                                    <a class="dropdown-item" href="#">Gummies</a>
-                                </li>
-                                <li class="dropdown-item-parent">
-                                    <a class="dropdown-item" href="#">Balm</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Events</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link">FAQ</a>
-                        </li>
-                    </ul>
-                    <!-- Search box code from https://codepen.io/ShortCode/pen/jOrBeOw and customised for this project -->
-                    <div class="nav-search-box">
-                        <form name="search">
-                            <input type="text" class="nav-search-input" name="txt" aria-label="Search"
-                            onmouseout="document.search.txt.value = ''">
-                        </form>
-                        <i class="fas fa-search"></i>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- End Navbar -->
+        {% include 'includes/navigation.html' %}
     </header>
     {% if messages %}
         <div class="message-container"></div>

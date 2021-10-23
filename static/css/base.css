@@ -99,7 +99,7 @@ ul,li {
 
 .bg--primary-dark-texture {
     background-color: var(--primary--dark);
-    background-image: url(../../media/line-in-motion.svg);
+    background-image: url('../../media/line-in-motion.svg');
 }
 
 .bg--secondary {
@@ -184,6 +184,58 @@ ul,li {
 .button--link--alt:focus:before {
     opacity: 1;
     text-indent: 0px;
+}
+
+/* Code taken from https://codepen.io/foxeisen/pen/bqZxLa and customised for this project */
+
+.button {
+    background-color: var(--white);
+    outline: none;
+    border: 1px solid var(--white);
+    font-family: var(--body);
+    color: var(--secondary);
+    font-size: 1.5rem;
+    padding: 0.25rem 0;
+    width: 8.375rem;
+    border-radius: 8px;
+    transition: all 0.3s linear 0s;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.button:before {
+    content: "\f1d8";
+    font-family: FontAwesome;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 100%;
+    background-color: var(--secondary);
+    color: var(--white);
+    border-radius: 0px 6px 6px 0px;
+    transition: all 0.2s linear 0s;
+    text-align: center;
+}
+
+.button:hover {
+    text-indent: -30px;
+}
+
+.button:hover:before {
+    right: 0;
+    text-indent: 0px;
+}
+
+@media (max-width: 992px) {
+    .button {
+        font-size: 1rem;
+    }
 }
 
 /* Nav */
@@ -446,7 +498,7 @@ ul,li {
 }
 
 .home-hero {
-    background: url(../../media/home-hero.jpg) no-repeat center;
+    background: url('../../media/home-hero.jpg') no-repeat center;
     background-size: cover;
     position: relative;
     text-align: center;
@@ -628,7 +680,7 @@ ul,li {
 /* About Section */
 
 .about-col-image {
-    background: url(../../media/cyclist-about.jpg) no-repeat center;
+    background: url('../../media/cyclist-about.jpg') no-repeat center;
     background-size: cover;
 }
 
@@ -685,5 +737,75 @@ ul,li {
     .about-col-image {
         height: 50vh;
         order: 2;
+    }
+}
+
+/* Newsletter */
+
+.newsletter-container {
+    padding: 6rem 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: url('../../media/medical.svg') no-repeat bottom 10px left 10px,
+                url('../../media/medical.svg') no-repeat top 10px right 10px;
+    background-size: 9rem;
+}
+
+.newsletter {
+    padding: 0 4rem;
+}
+
+.newsletter > * {
+    margin-bottom: 2rem;
+}
+
+.newsletter > h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.newsletter > h4 {
+    font-family: var(--body);
+}
+
+.newsletter-signup {
+    width: 100%;
+}
+
+.newsletter-input {
+    display: block;
+    margin: 1rem auto;
+    width: 35%;
+    padding: 0.5rem;
+    border: 1px transparent var(--white);
+    border-radius: 8px;
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    font-family: var(--body);
+    padding-left: 0.1rem;
+}
+
+@media (max-width: 992px) {
+    .newsletter-container {
+        background-size: 5rem;
+    }
+
+    .newsletter-input {
+        width: 80%
+    }
+}
+
+@media (max-width: 480px) {
+    .newsletter > h3 {
+        font-size: 1.75rem;
+    }
+
+    .newsletter > h4 {
+        font-size: 1.25rem;
+    }
+
+    .newsletter-input {
+        width: 100%
     }
 }
