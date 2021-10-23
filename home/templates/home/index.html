@@ -2,5 +2,22 @@
 {% load static %}
 
 {% block content %}
-<h1 class="text-success">Hello World</h1>
+    <!-- Hero/Header -->
+    <div class="container-fluid">
+        <div class="row hero-row">
+            <div class="col-lg-6 col-md-12 bg--primary-dark hero-col-left">
+                <div class="hero-product-image">
+                    <div class="hero-product-border text-center">
+                        <img src="../../../media/home-hero-product.jpg" alt="Cbd oil tincture product image" class="hero-image">
+                        <a href="#" class="button--link">Shop Product</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 home-hero">
+                <h1 class="tagline">Caring For Your Body & Mind</h1>
+                <span role="img" aria-label="Close up of a person applying cbd oil to their hand"></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Hero/Header -->
 {% endblock %}

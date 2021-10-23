@@ -1,0 +1,457 @@
+/* Import Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Raleway&display=swap');
+
+/* Style Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+
+:root {
+    --primary: #9AE17A; /* Feigoa */
+    --primary--dark: #6BBA62; /* Fern */
+    --secondary: #327370; /* Oracle */
+    --white: #fff;
+    --body-color: #fbfefa;
+    --title: "Poiret One", sans-serif;
+    --body: "Raleway", sans-serif;
+}
+
+body {
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.5;
+    background: var(--body-color)!important;
+}
+
+body,html {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--title);
+}
+
+a {
+    text-decoration: none!important;
+    cursor: pointer;
+    color: inherit!important;
+    font-family: var(--body);
+    font-size: 1.5rem;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    a {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    a {
+        font-size: 1rem;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Utilities */
+
+.bg--primary-dark {
+    background-color: var(--primary--dark);
+    background-image: url(../../media/line-in-motion.svg);
+}
+
+.button--link {
+    display: inline-block;
+    position: relative;
+    border-bottom: 2px solid var(--primary);
+    transition: all 250ms ease;
+}
+
+.button--link:before {
+    font-family: "FontAwesome";
+    content: '\f043';
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 250ms ease-in-out;
+    color: var(--primary);
+}
+
+.button--link:hover,
+.button--link:focus {
+    text-indent: -20px;
+    padding: 0 2.75rem;
+    border-bottom-color: transparent;
+}
+
+.button--link:hover:before,
+.button--link:focus:before {
+    opacity: 1;
+    text-indent: 0px;
+}
+
+/* Nav */
+
+.navbar {
+    border-bottom: 2px solid var(--primary--dark);
+}
+
+.navbar-brand {
+    width: 20%;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgba(0,0,0,0)!important;
+    color: rgba(0,0,0,0)!important;
+
+}
+
+/* Hamburger animation code taken and adapted from https://www.udemy.com/course/sass-the-complete-sass-course-css-preprocessor/ */
+
+.hamburger-menu {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 300;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+}
+
+.menu-line {
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary--dark);
+    transform-origin: right;
+    transition: all .5s .5s;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+    left: 0;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+    right: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu {
+    transform: rotateZ(90deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-1 {
+    transform: rotateZ(-40deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-3 {
+    transform: rotateZ(40deg);
+}
+
+.navbar-collapse {
+    flex-grow: unset!important;
+    margin-right: 2rem;
+}
+
+.nav-link {
+    font-family: var(--title);
+    font-weight: bold;
+    letter-spacing: 0.75px;
+    font-size: 1.75rem;
+    color: var(--primary--dark)!important;
+}
+
+.nav-item {
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.nav-item:after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 5px;
+    background: var(--primary--dark);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-item:hover:after,
+.nav-item:focus:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.dropdown-menu {
+    border: 2px solid var(--secondary)!important;
+    padding: 0!important;
+}
+
+.dropdown-toggle[aria-expanded="true"]:after {
+    transform: rotate(180deg); 
+}
+
+.dropdown-toggle:after { 
+    transition: 0.7s; 
+}
+
+.dropdown-item-parent {
+    background-color: var(--body);
+    transition: all 0.3s ease;
+    color: var(--secondary)!important;
+    padding: 0.5rem;
+}
+
+.dropdown-item-parent:not(:last-of-type) {
+    border-bottom: 1.5px solid var(--secondary);
+}
+
+.dropdown-item-parent:hover,
+.dropdown-item-parent:focus {
+    background-color: var(--secondary);
+    color: var(--white) !important;
+}
+
+.dropdown-item {
+    background-color: transparent!important;
+    font-family: var(--title);
+    font-weight: bold;
+}
+
+.dropdown-divider {
+    color: var(--secondary);
+    height: 3px;
+    opacity: 1;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 1rem 2rem!important;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-item:after {
+        width: 0;
+    }
+
+    .navbar-nav .dropdown-menu {
+        margin-top: 46px!important;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar-brand {
+        width: 30%;
+    }
+}
+
+@media (max-width: 440px) {
+    .navbar-brand {
+        width: 45%;
+    }
+}
+
+/* Search box code from https://codepen.io/ShortCode/pen/jOrBeOw and customised for this project */
+
+.nav-search-box {
+    background-color: var(--primary);
+    border-radius: 8px;
+    position: relative;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.nav-search-input {
+    padding: 10px;
+    width: 80px;
+    height: 3.75rem;
+    background: none;
+    border: 4px solid var(--white);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    color: var(--white);
+    outline: none;
+    transition: .5s;
+}
+
+.nav-search-box:hover .nav-search-input{
+    width: 350px;
+    background: transparent;
+    border: 4px solid var(--white);
+    border-radius: 8px;
+}
+
+.fa-search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 26px;
+    color: var(--white);
+    transition: .2s;
+}
+
+.nav-search-box:hover .fa-search{
+    opacity: 0;
+    z-index: -1;
+}
+
+@media (max-width: 992px) {
+    .nav-search-box {
+        width: 100%;
+    }
+
+    .nav-search-input {
+        width: 100%;
+    }
+
+    .nav-search-box:hover .nav-search-input {
+        width: 100%;
+    }
+
+    .fa-search {
+        left: unset;
+        right: 5px;
+    }
+
+    .navbar-collapse {
+        margin-right: 0;
+    }
+}
+
+/* Home hero */
+
+.hero-row {
+    height: 80vh;
+}
+
+.hero-col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-hero {
+    background: url(../../media/home-hero.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.hero-product-image {
+    width: 55%;
+    margin: 0 auto;
+}
+
+.hero-image {
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* code from https://getcssscan.com/css-box-shadow-examples */
+}
+
+.hero-product-border {
+    background-color: var(--white);
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.hero-product-border > a {
+    margin-top: 1.25rem;
+}
+
+.tagline {
+    color: var(--white);
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    width: 100%;
+    padding: 0 1.75rem;
+}
+
+@media (max-width: 992px) {
+    .home-hero {
+        height: 40vh;
+        order: 1;
+    }
+
+    .hero-col-left {
+        height: 40vh;
+        order: 2;
+    }
+
+    .hero-product-border {
+        width: 55%;
+        padding: 1rem;
+    }
+
+    .hero-product-border > a {
+        margin-top: 0.75rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-product-border {
+        width: 75%;
+    }
+
+    .hero-product-border > a {
+        margin-top: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-product-border {
+        width: 100%;
+    }
+}
