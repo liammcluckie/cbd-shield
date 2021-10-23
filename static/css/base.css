@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+ol, ul {
+    padding-left: 0!important;
+}
+
 /* Global Styles */
 
 :root {
@@ -79,11 +83,27 @@ img {
     text-align: center;
 }
 
+ul,li {
+    list-style: none;
+}
+
 /* Utilities */
 
 .bg--primary-dark {
     background-color: var(--primary--dark);
     background-image: url(../../media/line-in-motion.svg);
+}
+
+.bg--secondary {
+    background-color: var(--secondary);
+}
+
+.white {
+    color: var(--white);
+}
+
+.container--border {
+    border-radius: 8px
 }
 
 .button--link {
@@ -420,13 +440,17 @@ img {
 }
 
 @media (max-width: 992px) {
+    .hero-row {
+        height: 100%;
+    }
+
     .home-hero {
         height: 40vh;
         order: 1;
     }
 
     .hero-col-left {
-        height: 40vh;
+        height: 50vh;
         order: 2;
     }
 
@@ -453,5 +477,98 @@ img {
 @media (max-width: 480px) {
     .hero-product-border {
         width: 100%;
+    }
+}
+
+/* Home page categories/about section */
+
+.categories-section-title {
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding: 0 1.5rem;
+}
+
+.category-icon-list {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.5fr 0.5fr; 
+    gap: 2em 2em; 
+    grid-template-areas: 
+        ". . ."
+        ". . ."; 
+}
+
+.categories-layout {
+    padding-bottom: 20vh;
+}
+
+.layout-pull {
+    margin-bottom: -12rem;
+    padding-bottom: 20vh;
+}
+
+.category-icon-list-item {
+    text-align: center;
+    margin-top: 3rem;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 1.5rem;
+    background-color: var(--white);
+    transition: all 0.3s ease-in-out;
+}
+
+.category-icon-link {
+    display: block;
+}
+
+.category-icon-list-item:hover,
+.category-icon-list-item:focus {
+    transform: translateY(-20px);
+}
+
+
+.category-icon {
+    display: block;
+    position: relative; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 1rem 0;
+}
+
+@media (max-width: 991px) {
+    .category-icon-list {
+        grid-template-columns: 1fr 1fr; 
+        grid-template-areas: 
+        ". ."
+        ". ."; 
+    }
+}
+
+@media (max-width: 600px) {
+    .category-icon-list {
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+        "."
+        "."; 
+    }
+
+    .category-icon-list-item {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-section-title {
+        font-size: 1.5rem;
+    }
+
+    .layout-pull {
+        margin-bottom: -8rem;
+    }
+
+    .category-icon-list-item {
+        margin-top: 1.5rem;
     }
 }
