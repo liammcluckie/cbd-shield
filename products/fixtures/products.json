@@ -1,0 +1,422 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "h00001",
+            "name": "1000mg CBD Wellness Oil Tincture 30ml",
+            "description": "The perfect mix of the most desirable chemical compounds (CBD + CBG), healthy antioxidants, and an intoxicating blend of 18 different aromatic terpenes with a sweet and citrusy finish for a beautiful balance of CBD goodness and taste.",
+            "price": 59.99,
+            "category": 1,
+            "image": "pr-h00001.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "h00002",
+            "name": "25mg CBD Immunity Booster 60ml",
+            "description": "CBD-infused drink is an organic product with naturally sourced ingredients. The recipe contains only the highest quality full-spectrum, water-soluble CBD in order to offer maximum bioavailabilty. Produced with a variety of botanical extracts and containing 25mg of CBD.",
+            "price": 3.60,
+            "category": 1,
+            "image": "pr-h00002.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "b00001",
+            "name": "Emulsified CBD Hand Cream 1000mg, 75ml",
+            "description": "Filled with nourishing essential oils restoring your skins natural moisture levels that will leave your skin feeling smooth, soft and sensationally supple.",
+            "price": 15.00,
+            "category": 2,
+            "image": "pr-b00001.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "b00002",
+            "name": "Eucalyptus CBD Lip Balm",
+            "description": "Enhanced with high-quality CBD and natural oils to provide lavish, long-lasting moisturisation for the lips whilst also delivering the potentially-beneficial properties of CBD.",
+            "price": 8.00,
+            "category": 2,
+            "image": "pr-b00002.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00001",
+            "name": "Roll On Pain Freeze 150mg, 90ml",
+            "description": "The preferred topical roll on gel for professional and recreational athletes. Strong enough for the most rigorous competitors yet formulated for a variety of skin types using only plant oils, extracts and ingredients.",
+            "price": 44.00,
+            "category": 3,
+            "image": "pr-p00001.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00002",
+            "name": "850mg CBD Pain Cream, 95g",
+            "description": "A high-dose of pure CBD gives your muscles and joints temporary relief from nagging discomfort and aches. Cooling menthol soothes tightness and soreness, relaxing muscles enough to allow the body to focus on healing.",
+            "price": 41.00,
+            "category": 3,
+            "image": "pr-p00002.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "r00001",
+            "name": "CBD Bath Bomb",
+            "description": "Packed with a bevy of specially-formulated ingredients and all the essential oils and minerals you need to ensure your body gets a full recovery after a long day. Combined with 200mg of high-grade CBD, our bath bombs are designed for total relief from stress—both physical and mental.",
+            "price": 6.99,
+            "category": 4,
+            "image": "pr-r00001.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "r00002",
+            "name": "Calm 300mg CBD Oil Drop, 30ml",
+            "description": "Drop the liquid under your tongue and let it settle for at least 90 seconds. Swish it in your mouth, then swallow. Then you can finally relax & enjoy naturally!",
+            "price": 38.90,
+            "category": 4,
+            "image": "pr-r00002.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "s00001",
+            "name": "Skin Patches, 15mg x 10 Patches",
+            "description": "Helps deliver a targeted dose of CBD to a specific area. They are applied on to the skin at the affected area for a sustained slow release of 15mg of CBD.",
+            "price": 26.00,
+            "category": 5,
+            "image": "pr-s00001.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "s00002",
+            "name": "Turmeric 25mg CBD Soft Shells, 1500mg",
+            "description": "Benefit from both the benefits of broad spectrum CBD and a combination of superfoods that are rich in a variety of beneficial compounds. You get to enjoy broad spectrum CBD and Turmeric, which is rich in antioxidants.",
+            "price": 49.99,
+            "category": 5,
+            "image": "pr-s00002.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "tc00001",
+            "name": "Tranquil CBD 250mg Tea, 75g",
+            "description": "CBD tea combines all the soothing properties of CBD, Chamomile, Valerian, Rose Hip, Hawthorn berries & other beneficial herbs to create a therapeutic infusion that is pleasant in flavour and aroma.",
+            "price": 16.00,
+            "category": 6,
+            "image": "pr-tc00001.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "tc00002",
+            "name": "100mg CBD Infused Ground Coffee, Coarse Grind, 200g",
+            "description": "CBD-infused, arabica coffee. Ridiculously smooth tasting and uber calming. This coffee is best used in a Cafetiere (French Press).",
+            "price": 19.99,
+            "category": 6,
+            "image": "pr-tc00002.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "h00003",
+            "name": "Gut Instinct 10% CBD Sublingual Oil, 10ml",
+            "description": "Gut Instinct has a CBG 40%, CBD 30%, CBDA 30% ratio, which gives a diverse spectrum of properties. This ratio has been chosen to work specifically on the gastrointestinal region.",
+            "price": 50.00,
+            "category": 1,
+            "image": "pr-h00003.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "h00004",
+            "name": "Morning Capsules 900mg CBd, 60 capsules",
+            "description": "Blending a high-potency mix of CBD and CBG, these Morning Capsules deliver the perfect blend of antioxidants, nutrients, and terpenes to keep you brimming with energy without the crash.",
+            "price": 49.00,
+            "category": 1,
+            "image": "pr-h00004.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "h00005",
+            "name": "300mg CBD Vegan Immune Booster Gummies",
+            "description": "Vegan-friendly way to provide your immune system in a more accessible way. Each gummy contains a premium blend of Vitamins C and Vitamin B6, with Zinc and the fantastic properties of hemp extract to support you while on the go.",
+            "price": 41.66,
+            "category": 1,
+            "image": "pr-h00005.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "h00006",
+            "name": "Honey 1000mg CBD Detox Organic Herbal Spray, 10ml",
+            "description": "Featuring a brilliant blend of organic and Indian ayurvedic herbs including cinnamon, clove, turmeric, coriander and ginger. Just a couple of drops daily will help support your detox programme and keep you on track with your weight loss goals.",
+            "price": 39.20,
+            "category": 1,
+            "image": "pr-h00006.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "b00003",
+            "name": "Coconut Body Butter, 50g",
+            "description": "This rich, smooth body butter will keep the skin hydrated and moisturised. With the addition of 1% CBD to nourish the cutaneous endocannabinoid system.",
+            "price": 35.00,
+            "category": 2,
+            "image": "pr-b00003.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "b00004",
+            "name": "50mg CBD Night Cream, 50ml",
+            "description": "Ideal to use skin cream every evening and should be applied to cleansed skin. It contains 50mg Full spectrum Hemp Extract and is combined with other plant extracts and well as a peptide which is clinically proven to increase skins own production of hyaluronic acid leading to fuller firmer skin in weeks.",
+            "price": 37.20,
+            "category": 2,
+            "image": "pr-b00004.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "b00005",
+            "name": "50mg CBD Rejuvenate Anti-Aging Cream",
+            "description": "The serum is ideal for everyday use and should be applied to cleansed skin. Its light texture absorbs quickly into the skin. Avoid the eye area. This product is suitable for all Skin types and is made using 97.25% Natural Origin ingredients.",
+            "price": 35.00,
+            "category": 2,
+            "image": "pr-b00005.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "b00006",
+            "name": "15mg CBD Biodegradable Face Masks x 4",
+            "description": "Created to sooth the skin with thanks to it’s mud like feature. The masks also contain 15 mg Full spectrum Hemp Extract and peptides that’s been clinically proven to calm the skin.",
+            "price": 19.20,
+            "category": 2,
+            "image": "pr-b00006.jpg"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00003",
+            "name": "Joint Rollerball Massage Oil, 15ml",
+            "description": "Joint Massage Oil contains a warming and comforting blend of essential oils in an organic grapeseed, golden jojoba and vitamin E oil base with the addition of an organic mixed cannabinoid extract (giving 0.6% CBD) to soothe overtired muscles or uncomfortable joints.",
+            "price": 9.50,
+            "category": 3,
+            "image": "pr-p00003.jpg"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00004",
+            "name": "Wild Strawberry Vape Liquid 250mg",
+            "description": "CBD e-liquid is a tantalising blend of dew-covered woodland strawberries glowing with ruby-red lustre and bursting with succulent juiciness.",
+            "price": 8.00,
+            "category": 3,
+            "image": "pr-p00004.jpg"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00005",
+            "name": "1000mg CBD Raw Cannabis Oil Drops, 10ml",
+            "description": "RAW CBD Oil is ‘raw’ by name, ‘raw’ by nature. Due to the type of oil, the raw extract is darker in colour and has more of an acquired taste due to its intense flavour profile.",
+            "price": 70.00,
+            "category": 3,
+            "image": "pr-p00005.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "p00006",
+            "name": "250mg CBD Muscle & Joint Balm",
+            "description": "CBD-infused deep muscle and joint relief balm has been specifically developed to ease tired, sore and aching muscles and joints, providing effective targeted relief. Simply apply to effected area and gently rub in to enjoy the positive relief. Can be applied as and when needed.",
+            "price": 19.90,
+            "category": 3,
+            "image": "pr-p00006.jpg"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "r00003",
+            "name": "Sleep CBD Oil - Night Time Tincture",
+            "description": "An effective sleep tincture that’s rich in CBD and further enhanced with other sleep-supporting ingredients and extracts, helping you experience deep, natural and refreshing sleep and waking refreshed and ready for the day.",
+            "price": 45.00,
+            "category": 4,
+            "image": "pr-r00003.jpg"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "sku": "r00004",
+            "name": "100mg CBD Sleep Bath Salts, 500g",
+            "description": "Refresh and cleanse your body and mind, the soft aromas of the paired salts make this bath salt a beautifully relaxing use – paired with 100MG cannabidiol to further help the refreshing cleanse of your body and mind relaxing you and refreshing you at the same time.",
+            "price": 10.00,
+            "category": 4,
+            "image": "pr-r00004.jpg"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "sku": "r00005",
+            "name": "Coconut Oil Candle, 300g",
+            "description": "Using a bespoke blend of organic coconut oil and rapeseed wax, each Virginutty candle is luxuriously infused with premium grade phthalate-free fragrance and essential oils.",
+            "price": 45.00,
+            "category": 4,
+            "image": "pr-r00005.jpg"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "sku": "s00003",
+            "name": "2000mg CBD Muscle Rub Balm, 100ml",
+            "description": "Treat yourself after a hard days exercise with the cooling yet warming, soothing and calming effects of this super effective CBD Muscle Rub. Slap this onto your skin and give it a good rub in annnnd relax!",
+            "price": 24.16,
+            "category": 5,
+            "image": "pr-s00003.jpg"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "sku": "s00004",
+            "name": "1500mg CBD Pro Gummies",
+            "description": "These tablets contain a whopping 30mg CBD per gummy and are aimed at putting sportspeople of all levels right in the recovery zone. These tabs are also great for people just requiring a higher dose of CBD, or those looking get a bit more bang for their buck.",
+            "price": 14.56,
+            "category": 5,
+            "image": "pr-s00004.jpg"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "sku": "s00005",
+            "name": "12mg CBD Pre-Workout Energy Shakes x 12",
+            "description": "CBD shake is made to help you achieve homeostasis by regulating your body’s endocannabinoid system. This restores balance in your central nervous system and immune system. CBD has been shown to increase wakefulness and drive if administered in precise doses.",
+            "price": 38.00,
+            "category": 5,
+            "image": "pr-s00005.jpg"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "sku": "s00006",
+            "name": "600mg CBD Hemp Protein Powder, 1250g",
+            "description": "A magnificent plant-based workout partner infused with 100% natural CBD. It tastes delicious, builds muscle and supports recovery. Hemp Protein is a great protein source for vegetarians and vegans due to its complete amino acid profile.",
+            "price": 61.60,
+            "category": 5,
+            "image": "pr-s00006.jpg"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+            "sku": "tc00003",
+            "name": "560mg CBD Herbal Loose Leaf Tea",
+            "description": "The most efficient & natural way to take CBD to contribute to relieving stress, anxiety, pain and improving sleep and mood in loose leaf.",
+            "price": 12.60,
+            "category": 6,
+            "image": "pr-tc00003.jpg"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+            "sku": "tc00004",
+            "name": "CBD Coffee Syrup - Hazelnut",
+            "description": "Why not add a little flavour to your favourite cup of coffee with the added benefits of CBD.",
+            "price": 14.99,
+            "category": 6,
+            "image": "pr-tc00004.jpg"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.product",
+        "fields": {
+            "sku": "tc00005",
+            "name": "100mg CBD infused Coffee, Whole Beans, 100g",
+            "description": "Colombian fair trade coffee infused with CBD. Perfect for all your coffee lovers! Each 7g serving size of coffee contains 7mg of CBD and there’s approximately 14 servings per 100g of coffee.",
+            "price": 17.99,
+            "category": 6,
+            "image": "pr-tc00005.jpg"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.product",
+        "fields": {
+            "sku": "tc00006",
+            "name": "10mg CBD Lemon & Ginger Slim Tea Pyramid Bags",
+            "description": "The blending of herbal and fruit teas has been used since ancient times to promote health, healing, and relaxation. Combined with the benefits of hemp, they offer a holistic remedy that can help reduce stress, boost energy, and aid weight loss.",
+            "price": 15.00,
+            "category": 6,
+            "image": "pr-tc00006.jpg"
+        }
+    }
+]
