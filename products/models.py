@@ -3,6 +3,10 @@ from django.db import models
 
 class Category(models.Model):
     """ Class for category fields  """
+    class Meta:
+        """ Correct plural misspelling """
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -15,7 +19,9 @@ class Category(models.Model):
 
 class Product(models.Model):
     """ Class for product fields """
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL
+    )
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
