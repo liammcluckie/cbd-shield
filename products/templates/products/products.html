@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+   <div class="container">
+       <div class="row">
+           <div class="col text-center">
+               <h1 class="products-title">Products</h1>
+               <hr class="title-divider">
+           </div>
+        </div>
+        <div class="row">
+           {% for product in products %}
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="custom-card-wrapper">
+                        <div class="custom-card">
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy" class="product-card-image">
+                            <a href="#" class="product-card-link">
+                                <div class="card-overlay">
+                                    <div class="card-content">
+                                        <span class="card-content--first">
+                                            <h5>{{ product.name }}</h5>
+                                            <p>£{{ product.price }}</p>
+                                        </span>
+                                        <span class="card-content--second">
+                                            <button type="text" class="button button--cart">Add to Cart</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+           {% endfor %}
+       </div>
+   </div>
+{% endblock %}
