@@ -1,7 +1,8 @@
 <!-- Navbar code taken from https://getbootstrap.com/docs/5.1/components/navbar/ -->
+{% load custom_tags %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand home-image-link" href="{% url 'home' %}">
             <img src="../media/logo-transparent.png" alt="CBD Shield logo" class="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -26,13 +27,10 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li class="dropdown-item-parent">
-                            <a class="dropdown-item" href="#">Tincture</a>
+                            <a class="dropdown-item" href="{% url 'products' %}">Shop All</a>
                         </li>
                         <li class="dropdown-item-parent">
-                            <a class="dropdown-item" href="#">Gummies</a>
-                        </li>
-                        <li class="dropdown-item-parent">
-                            <a class="dropdown-item" href="#">Balm</a>
+                            <a class="dropdown-item" href="{% anchor 'home' 'ailments' %}">Shop By Ailment</a>
                         </li>
                     </ul>
                 </li>
