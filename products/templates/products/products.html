@@ -2,13 +2,15 @@
 {% load static %}
 
 {% block content %}
-   <div class="container">
+   <section class="container-fluid bg--secondary">
        <div class="row">
            <div class="col text-center">
                <h1 class="products-title">Products</h1>
                <hr class="title-divider">
            </div>
         </div>
+    </section>
+    <div class="container">
         <div class="row">
            {% for product in products %}
                 <div class="col-lg-4 col-md-6 col-sm-12">
@@ -33,5 +35,5 @@
                 </div>
            {% endfor %}
        </div>
-   </div>
+   </section>
 {% endblock %}
