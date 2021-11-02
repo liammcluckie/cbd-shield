@@ -2,22 +2,34 @@
 {% load static %}
 
 {% block content %}
+    <!-- Single Product Details -->
     <section class="container mt-5">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-5 col-md-6 col-sm-12">
                 <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+                <hr class="single-product-divider d-md-none">
             </div>
-            <div class="col lg-6 offset-2">
+            <div class="col lg-6 offset-lg-1 col-md-6 col-sm-12 single-product">
+                <img src="../../../media/{{ product.category }}.png" alt="Illustration displaying cbd for {{ product.category }}" class="single-category-icon">
                 <h1>{{ product.name }}</h1>
-                <p><em>CBD for {{ product.category }}</em></p>
+                <p><em>CBD for {{ product.category.friendly_name }}</em></p>
+                <hr class="single-product-divider">
                 <p>{{ product.description }}</p>
-                <p>£{{ product.price }}</p>
-                <form action="">
+                <hr class="single-product-divider">
+                <p class="single-product-price">£{{ product.price }}</p>
+                <form action="" class="form--cart">
                     <label for="quantity">Quantity</label>
                     <input type="number" id="quantity" name="quantity" value="1">
+                    <button type="text" class="button button--cart">Add to Cart</button>
                 </form>
-                <button type="text" class="button button--cart">Add to Cart</button>
             </div>
        </div>
-   </section>
+    </section>
+    <!-- End of Single Product Details -->
+    <!-- Product Reviews -->
+    <section class="container mt-5">
+       <hr class="single-product-divider">
+    </section>
+    <!-- End of Product Reviews -->
+
 {% endblock %}
