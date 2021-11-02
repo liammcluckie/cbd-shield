@@ -12,7 +12,13 @@
             <div class="col lg-6 offset-lg-1 col-md-6 col-sm-12 single-product">
                 <img src="../../../media/{{ product.category }}.png" alt="Illustration displaying cbd for {{ product.category }}" class="single-category-icon">
                 <h1>{{ product.name }}</h1>
-                <p><em>CBD for {{ product.category.friendly_name }}</em></p>
+                <p>
+                    <em>
+                        <a href="{% url 'products' %}?category={{ product.category.name }}" class="single-category-link">
+                            CBD for {{ product.category.friendly_name }}
+                        </a>
+                    </em>
+                </p>
                 <hr class="single-product-divider">
                 <p>{{ product.description }}</p>
                 <hr class="single-product-divider">

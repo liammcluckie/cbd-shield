@@ -11,11 +11,37 @@
         </div>
     </section>
     <div class="container mt-5">
+        <!-- Sort Products -->
+        <div class="row mb-4">
+            <div class="col products-sort">
+                <ul class="me-auto mb-2 mb-lg-0 products-sort-list">
+                    <li class="product-sort-item dropdown">
+                        <a class="product-sort-link dropdown-toggle" href="#" id="productSortDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort By
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productSortDropdown">
+                            <li class="dropdown-item-parent">
+                                <a class="dropdown-product-sort-link" href="{% url 'products' %}?sort=price&direction=asc">Price - Low to High</a>
+                            </li>
+                            <li class="dropdown-item-parent">
+                                <a class="dropdown-product-sort-link" href="{% url 'products' %}?sort=price&direction=desc">Price - High to Low</a>
+                            </li>
+                            <li class="dropdown-item-parent">
+                                <a class="dropdown-product-sort-link" href="{% url 'products' %}?sort=category&direction=asc">Purpose</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End of Sort Products -->
         <div class="row">
            {% for product in products %}
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card-wrapper">
                         <div class="custom-card">
+                            <img src="../../../media/{{ product.category }}.png" alt="Illustration displaying cbd for {{ product.category }}" class="product-category-badge">
                             <img src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy" class="product-card-image">
                             <a href="{% url 'single_product' product.id %}" class="product-card-link">
                                 <div class="card-overlay">
