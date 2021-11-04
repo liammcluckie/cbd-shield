@@ -81,7 +81,7 @@
                         </tbody>
                     </table>
                 </div>
-            <div class="col-lg-3 col-sm-12 bg--secondary col-sidebar">
+            <div class="col-lg-3 col-sm-12 bg--secondary col-sidebar {% if bag_items|length == 1 %} col-sidebar--clear {% endif %}">
                 <div class="cart-sidebar white">
                     <hr class="title-divider">
                     <div>
@@ -94,8 +94,13 @@
                 </div>
             </div>
             {% else %}
-            <div class="col-12">
-                <p>Your shopping cart is empty</p>
+            <div class="col-12 text-center mt-5">
+                <h2>Your Shopping Cart is Empty</h2>
+                <hr class="title-divider title-divider--secondary">
+                <h3 class="mb-5">Not for Long Though...</h3>
+                <div class="cart-back-link">
+                    <a href="{% url 'products' %}" class="button--link button--link--back">Keep Shopping</a>
+                </div>
             </div>
             {% endif %}
         </div>
