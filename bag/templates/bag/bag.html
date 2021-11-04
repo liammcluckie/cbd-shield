@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block content %}
 <section>
@@ -26,7 +27,7 @@
                                     <h4>Price</h4>
                                 </th>
                                 <th>
-                                    <h4>QTY</h4>
+                                    <h4 class="ms-5">QTY</h4>
                                 </th>
                                 <th>
                                     <h4>Total</h4>
@@ -52,10 +53,28 @@
                                         <p>£{{ item.product.price }}</p>
                                     </td>
                                     <td>
-                                        <p>{{ item.quantity }}</p>
+                                        <form action="{% url 'adjust_bag' item.item_id %}" method="POST" class="update-quantity-form">
+                                            {% csrf_token %}
+                                            <div class="input-group-prepend quantity-update">
+                                                <button class="decrement-quantity" data-item_id="{{ item.item_id }}" id="decrement-quantity_{{ item.item_id }}">
+                                                    <i class="fas fa-minus"></i>
+                                                </button>
+                                            </div>
+                                            <label for="id_qty_{{ item.item_id }}"></label>
+                                            <input class="update-quantity-input" type="number" name="quantity" value="{{ item.quantity }}" 
+                                            min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                            <div class="input-group-append quantity-update">
+                                                <button class="increment-quantity" data-item_id="{{ item.item_id }}" id="increment-quantity_{{ item.item_id }}">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="quantity-update-submit">
+                                                <a class="update-cart-item"><i class="fas fa-check"></i></a>
+                                            </div>
+                                        </form>
                                     </td>
                                     <td>
-                                        <p>£{{ item.product.price }}</p>
+                                        <p>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -89,4 +108,9 @@
         {% endif %}
     </div>
  </section>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {% include 'bag/includes/update_cart_quantity_script.html' %}
 {% endblock %}
