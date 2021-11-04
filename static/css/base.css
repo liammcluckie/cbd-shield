@@ -292,6 +292,10 @@ ul,li {
     opacity: 1!important;
 }
 
+.title-divider--secondary {
+    color: var(--secondary);
+}
+
 .clear-header {
     display: none;
 }
@@ -1262,6 +1266,10 @@ header {
     background-image: url(../../media/cart.svg);
     background-repeat: no-repeat;
     background-position: top;
+}
+
+.col-sidebar--clear {
+    background-size: 40%;
 }
 
 .cart-sidebar > div {
