@@ -1,0 +1,84 @@
+<script>
+
+    /**
+     * Disable +/- buttons outside of min and max range
+     */
+
+     function enableDisableButton() {
+        // Use foreach loop to retrieve individual input values
+        document.querySelectorAll(".update-quantity-input").forEach(input => {
+            // Traverse the DOM and retrieve necessary elements
+            const formParent = input.parentElement;
+            const firstButtonDiv = formParent.children[1];
+            const lastButtonDiv = formParent.children[4];
+            const minusDisabled = firstButtonDiv.children[0];
+            const plusDisabled = lastButtonDiv.children[0];
+            const currentValue = input.value;
+            // If current value is less than 2 disable the minus button
+            if (currentValue < 1) {
+                minusDisabled.disabled = true;
+            // If current value is greater than 98 disable the plus button
+            } else if (currentValue > 98) {
+                plusDisabled.disabled = true;
+            } else {
+                minusDisabled.disabled = false;
+                plusDisabled.disabled = false;
+            }
+        });
+    }
+    window.onload = enableDisableButton;
+    
+    /**
+     * Add increment functionality to increment button
+     */ 
+    
+    document.querySelectorAll(".increment-quantity").forEach(btn => {
+        // Add event listener to each button
+        btn.addEventListener("click", () => {
+            // Prevent page reload
+            event.preventDefault();
+            // Traverse the DOM to retrieve elements
+            const btnParent = btn.parentElement;
+            let quantityInput = btnParent.previousElementSibling;
+            // Increase the input value each click
+            const quantityInputValue = `${quantityInput.value++}`;
+            quantityInput = quantityInputValue;
+            // Call function to check input value
+            enableDisableButton();
+        });
+    });
+
+    /**
+     * Add decrement functionality to decrement button
+     */ 
+    
+    document.querySelectorAll(".decrement-quantity").forEach(btn => {
+        // Add event listener to each button
+        btn.addEventListener("click", () => {
+            // Prevent page reload
+            event.preventDefault();
+            // Traverse the DOM to retrieve elements
+            const btnParent = btn.parentElement;
+            const formParent = btnParent.parentElement;
+            let quantityInput = formParent.children[3];
+            // Decrease the input value each click
+            const quantityInputValue = `${quantityInput.value--}`;
+            quantityInput = quantityInputValue;
+            // Call function to check input value
+            enableDisableButton();
+        });
+    });
+
+    /**
+     * Update and submit form
+     */
+
+    document.querySelectorAll(".update-cart-item").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const btnParent = btn.parentElement;
+            const form = btnParent.parentElement;
+            form.submit();
+        });
+    });
+
+</script>
