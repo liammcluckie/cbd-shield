@@ -41,6 +41,21 @@
 <body>
     <header>
         {% include 'includes/navigation.html' %}
+        <!-- Cart & Profile links -->
+        <div class="user-icons bg-light">
+            <a href="{% url 'view_bag' %}">
+                <i class="fas fa-shopping-cart {% if request.get_full_path == '/bag/' %} icon-active {% endif %}"></i>
+                {% if grand_total %}
+                    <p class="cart-total">
+                        £{{ grand_total|floatformat:2 }}
+                    </p>
+                {% endif %}
+            </a>
+            <a href="profile">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+        <!-- End of Cart & Profile links -->
     </header>
     {% if messages %}
         <div class="message-container"></div>
