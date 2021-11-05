@@ -202,6 +202,10 @@ ul,li {
     text-indent: 0;
 }
 
+.button--link--cart:before {
+    content: '\f07a';
+}
+
 /* Code taken from https://codepen.io/foxeisen/pen/bqZxLa and customised for this project */
 
 .button {
@@ -1414,14 +1418,23 @@ header {
     }
 }
 
+/* Toast Messages Success */
+
+.toast-body--success {
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 /* Toast Messages */
 
 .message-container {
-    margin-left: auto;
-    margin-right: 9rem;
+    position: relative;
 }
 
 .custom-toast {
+    position: absolute;
+    right: 143px;
     border: none!important;
     border-radius: unset!important;
     border-bottom-left-radius: 8px;
@@ -1459,11 +1472,16 @@ header {
     color: var(--warning);
 }
 
+.toast-cart-total > span {
+    font-size: 1.15rem;
+}
+
 @media (max-width: 767px) {
-    .message-container {
-        margin: unset;
+    .custom-toast {
         position: fixed;
-        bottom: 21px;
+        right: unset;
+        top: unset;
+        bottom: 0;
         left: 50%;
         transform: translate(-50%);
     }
