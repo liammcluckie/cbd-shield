@@ -1,0 +1,36 @@
+<div class="toast custom-toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header custom-toast-header bg-light">
+        <p class="me-auto">Success!&nbsp;<i class="far fa-check-circle success-icon"></i></p>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body bg-light">
+        <div class="row">
+            <div class="col">
+                {{ message }}
+            </div>
+        </div>
+        {% if grand_total %}
+            <p>Your Bag <strong>({{ product_count }})</strong></p>
+            <div class="toast-body--success">
+                {% for item in bag_items %}
+                    <div class="row">
+                        <div class="col mb-2">
+                            <img src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                        </div>
+                        <div class="col">
+                            <p>{{ item.product.name }}</p>
+                            <p>QTY | <strong>({{ item.quantity }})</strong></p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="row mt-2">
+                <div class="col">
+                    <p class="toast-cart-total">Total | <span>£{{ total|floatformat:2 }}</span></p>
+                    <a href="{% url 'view_bag' %}" class="button--link button--link--cart"> Go to Checkout</a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>

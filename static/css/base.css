@@ -27,6 +27,7 @@ ol, ul {
     --secondary: #327370; /* Oracle */
     --white: #fff;
     --danger: #F25C66;
+    --warning: #ff6600;
     --body-color: #fbfefa;
     --title: "Poiret One", sans-serif;
     --body: "Raleway", sans-serif;
@@ -199,6 +200,10 @@ ul,li {
 .button--link--back:hover,
 .button--link--back:focus {
     text-indent: 0;
+}
+
+.button--link--cart:before {
+    content: '\f07a';
 }
 
 /* Code taken from https://codepen.io/foxeisen/pen/bqZxLa and customised for this project */
@@ -619,10 +624,6 @@ header {
 }
 
 @media (max-width: 405px) {
-    .user-icons {
-        bottom: -250px;
-    }
-
     .clear-icons {
         display: block;
         height: 50px;
@@ -1414,6 +1415,85 @@ header {
 @media (max-width: 515px) {
     .col-sidebar {
         background-size: 35%;
+    }
+}
+
+/* Toast Messages Success */
+
+.toast-body--success {
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* Toast Messages */
+
+.message-container {
+    position: relative;
+}
+
+.custom-toast {
+    position: absolute;
+    right: 143px;
+    border: none!important;
+    border-radius: unset!important;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px!important;
+    z-index: 600;
+}
+
+.custom-toast-header {
+    border-bottom: 1px solid!important;
+}
+
+.custom-toast-header > p {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.toast-body {
+    font-size: 1.05rem;
+}
+
+.success-icon {
+    color: var(--primary--dark);
+}
+
+.error-icon {
+    color: var(--danger);
+}
+
+.info-icon {
+    color: var(--secondary);
+}
+
+.warning-icon {
+    color: var(--warning);
+}
+
+.toast-cart-total > span {
+    font-size: 1.15rem;
+}
+
+@media (max-width: 767px) {
+    .custom-toast {
+        position: fixed;
+        right: unset;
+        top: unset;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .custom-toast {
+        border-radius: 8px!important;
+    }
+}
+
+@media (max-width: 400px) {
+    .message-container {
+        width: 90%;
     }
 }
 
