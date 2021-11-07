@@ -88,6 +88,10 @@ img {
     text-align: center;
 }
 
+.text-end {
+    text-align: end;
+}
+
 ul,li {
     list-style: none;
 }
@@ -274,6 +278,17 @@ ul,li {
 
 .button--cart--alt:before {
     content: "\f07a";
+}
+
+.button--order {
+    background-color: var(--body-color);
+    width: 12rem;
+    border: 2px solid var(--secondary);
+}
+
+.button--order:before {
+    content: "£";
+    font-size: 25px;
 }
 
 @media (max-width: 992px) {
@@ -621,6 +636,12 @@ header {
 
 .clear-icons {
     display: none;
+}
+
+@media (max-width: 500px) {
+    .user-icons {
+        bottom: -250px;
+    }
 }
 
 @media (max-width: 405px) {
@@ -1421,7 +1442,7 @@ header {
 /* Toast Messages Success */
 
 .toast-body--success {
-    height: 300px;
+    height: 200px;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -1473,7 +1494,7 @@ header {
 }
 
 .toast-cart-total > span {
-    font-size: 1.15rem;
+    font-size: 1.35rem;
 }
 
 @media (max-width: 767px) {
@@ -1494,6 +1515,128 @@ header {
 @media (max-width: 400px) {
     .message-container {
         width: 90%;
+    }
+}
+
+/* Checkout */
+
+.checkout-cart-wrapper {
+    max-height: 315px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.checkout-totals > span {
+    font-size: 1.35rem;
+}
+
+.payment-fieldset > div {
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--secondary)!important;
+    box-shadow: 0 0 0 0.25rem rgb(50 115 112 / 25%)!important;
+}
+
+/* Code for Checkbox from https://codepen.io/sderoij/pen/VvJJwE and adapted for this project */
+
+.checkbox-container {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--secondary);
+    border-radius: 8px;
+    position: relative;
+}
+
+.checkout-save-label {
+    height: 30px;
+    width: 30px;
+    z-index: 0;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.checkout-save-label > div {
+    height: 15px;
+    width: 15px;
+    border: 2px solid var(--secondary);
+    margin: 5.5px 6px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    transition: all 100ms ease-in-out, border 50ms ease 100ms;
+}
+
+.checkout-save-input {
+    height: 30px;
+    width: 30px;
+    margin: 0;
+    opacity: 0;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkout-save-input:checked + .checkout-save-label > div {
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-color: var(--secondary);
+    height: 15px;
+    width: 10px;
+    margin-top: 3px;
+    margin-left: 8px;
+    transform: rotate(40deg);
+    transition: all 150ms ease-in-out;
+}
+
+.checkout-user-accounts {
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+}
+
+.checkout-account-links {
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    transition: border 0.3s ease-in-out;
+}
+
+.checkout-account-links:hover,
+.checkout-account-links:focus {
+    border-bottom: 1px solid var(--secondary);
+}
+
+.payment-details-fieldset > legend {
+    text-align: center;
+}
+
+.checkout-payment-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-payment-link > a {
+    align-self: flex-start;
+}
+
+.checkout-payment-link > button,
+.checkout-payment-link > p {
+    align-self: flex-end;
+}
+
+.checkout-payment-link > p > span {
+    font-size: 1.35rem;
+}
+
+@media (max-width: 500px) {
+    .checkout-payment-link > a,
+    .checkout-payment-link > button,
+    .checkout-payment-link > p {
+        align-self: center;
     }
 }
 
