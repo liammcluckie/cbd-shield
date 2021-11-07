@@ -90,7 +90,7 @@
                     </div>
                     <hr class="title-divider">
                     <h5>Grand Total | <span>£{{ grand_total|floatformat:2 }}</span></h5>
-                    <a href="" class="button button--cart--alt">Checkout</a>
+                    <a href="{% url 'checkout' %}" class="button button--cart--alt">Checkout</a>
                 </div>
             </div>
             {% else %}
