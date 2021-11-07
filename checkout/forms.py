@@ -2,16 +2,18 @@ from django import forms
 from .models import Order
 
 
-class Meta:
+class OrderForm(forms.ModelForm):
     """
     Adds/updates checkout form fields, classes,
     labels and placeholders
     """
-    model = Order
-    fields = ('full_name', 'email', 'phone_number',
-              'street_address1', 'street_address2',
-              'town_or_city', 'postcode', 'country',
-              'county',)
+    class Meta:
+        """ Checkout form fields """
+        model = Order
+        fields = ('full_name', 'email', 'phone_number',
+                  'street_address1', 'street_address2',
+                  'town_or_city', 'postcode', 'country',
+                  'county',)
 
     def __init__(self, *args, **kwargs):
         """
@@ -28,6 +30,7 @@ class Meta:
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
             'county': 'County',
+            'country': 'Country',
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
