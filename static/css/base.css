@@ -123,6 +123,10 @@ ul,li {
     border-radius: 8px
 }
 
+.no-margin-bottom {
+    margin-bottom: 0!important;
+}
+
 .button--link {
     display: inline-block;
     position: relative;
@@ -1684,6 +1688,42 @@ header {
 #card-element {
     color: #000;
     border: 1px solid #000;
+}
+
+.stripe-card-error {
+    color: var(--danger);
+}
+
+/* Order Success */
+
+.order-header-message {
+    color: var(--white);
+    margin: 2rem 0;
+    font-family: var(--body);
+}
+
+.order-summary {
+    padding: 0 2rem!important;
+}
+
+.word-break {
+    word-wrap: break-word;
+}
+
+.order-summary > .row {
+    justify-content: center;
+}
+
+.summary-section-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.summary-divider {
+    color: var(--secondary);
+    height: 3px!important;
 }
 
 /* Footer */
