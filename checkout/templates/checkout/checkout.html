@@ -2,10 +2,6 @@
 {% load static %}
 {% load bag_tools %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
-{% endblock %}
-
 {% block content %}
 <section>
     <div class="container-fluid bg--secondary">
@@ -60,15 +56,15 @@
                     </fieldset>
                     <fieldset class="payment-details-fieldset">
                         <legend>Payment</legend>
-                        <!-- Braintree card element -->
-                        <div id="card-element"></div>
+                        <!-- Stripe card element -->
+                        <div id="card-element" class="mb-4"></div>
                         <!-- Used to display errors -->
                         <div id="card-errors"></div>
                     </fieldset>
                     <!-- Submit form -->
                     <div class="checkout-payment-link">
                         <a href="{% url 'view_bag' %}" class="button--link button--link--back mb-3">Adjust Order</a>
-                        <button id="sumbit-order" type="submit" class="button button--order mb-3">Place Order</button>
+                        <button id="submit-order" type="submit" class="button button--order mb-3">Place Order</button>
                         <p>Your card will be charged | <span>£{{ grand_total|floatformat:2 }}</span></p>
                         <hr class="title-divider--secondary">
                     </div>
@@ -113,4 +109,11 @@
         </div>
     </div>
  </section>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
