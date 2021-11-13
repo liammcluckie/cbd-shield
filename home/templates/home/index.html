@@ -8,8 +8,8 @@
             <div class="col-lg-6 col-md-12 bg--primary-dark-texture hero-col-left">
                 <div class="hero-product-image">
                     <div class="hero-product-border text-center">
-                        <img src="../../../media/home-hero-product.jpg" alt="Cbd oil tincture product image" class="hero-image">
-                        <a href="#" class="button--link">Shop Product</a>
+                        <img src="{{ MEDIA_URL }}home-hero-product.jpg" alt="Cbd oil tincture product image" class="hero-image">
+                        <a href="{% url 'products' %}" class="button--link">Shop Products</a>
                     </div>
                 </div>
             </div>
@@ -36,37 +36,37 @@
                     <ul class="category-icon-list">
                         <li class="category-icon-list-item">
                             <a href="{% url 'products' %}?category=health" class="category-icon-link">
-                                <img src="../../../media/health.png" class="category-icon" alt="Illustration depicting mental health">
+                                <img src="{{ MEDIA_URL }}health.png" class="category-icon" alt="Illustration depicting mental health">
                                 CBD For Health
                             </a>
                         </li>
                         <li class="category-icon-list-item">
                             <a href="{% url 'products' %}?category=beauty" class="category-icon-link">
-                                <img src="../../../media/beauty.png" class="category-icon" alt="Illustration depicting beauty">
+                                <img src="{{ MEDIA_URL }}beauty.png" class="category-icon" alt="Illustration depicting beauty">
                                 CBD For Beauty
                             </a>
                         </li>
                         <li class="category-icon-list-item">
                             <a href="{% url 'products' %}?category=pain" class="category-icon-link">
-                                <img src="../../../media/pain.png" class="category-icon" alt="Illustration depicting pain">
+                                <img src="{{ MEDIA_URL }}pain.png" class="category-icon" alt="Illustration depicting pain">
                                 CBD For Pain
                             </a>
                         </li>
                         <li class="category-icon-list-item">
                             <a href="{% url 'products' %}?category=relaxation" class="category-icon-link">
-                                <img src="../../../media/relaxation.png" class="category-icon" alt="Illustration depicting relaxation">
+                                <img src="{{ MEDIA_URL }}relaxation.png" class="category-icon" alt="Illustration depicting relaxation">
                                 CBD For Relaxation
                             </a>
                         </li>
                         <li class="category-icon-list-item">
                             <a href="{% url 'products' %}?category=sport" class="category-icon-link">
-                                <img src="../../../media/sport.png" class="category-icon" alt="Illustration depicting sport">
+                                <img src="{{ MEDIA_URL }}sport.png" class="category-icon" alt="Illustration depicting sport">
                                 CBD For Sport
                             </a>
                         </li>
                         <li class="category-icon-list-item">
                             <a href="{% url 'products' %}?category=tea_coffee" class="category-icon-link">
-                                <img src="../../../media/tea_coffee.png" class="category-icon" alt="Illustration of a tea or coffee cup">
+                                <img src="{{ MEDIA_URL }}tea_coffee.png" class="category-icon" alt="Illustration of a tea or coffee cup">
                                 CBD Tea & Coffee
                             </a>
                         </li>

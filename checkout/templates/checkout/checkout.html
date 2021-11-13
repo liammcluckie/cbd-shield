@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bag_tools %}
+
+{% block content %}
+<section id="checkout-container">
+    <div class="container-fluid bg--secondary">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="products-title">Checkout</h1>
+                <hr class="title-divider">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-5">
+        <div class="clear-icons"></div>
+        <div class="row">
+            <div class="col-lg-5 col-md-12 offset-lg-1 order-2 order-lg-1">
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                    {% csrf_token %}
+                    <fieldset class="payment-fieldset">
+                        <legend>Details</legend>
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
+                    </fieldset>
+                    <fieldset class="payment-fieldset">
+                        <legend>Delivery</legend>
+                        {{ order_form.phone_number | as_crispy_field }}
+                        {{ order_form.street_address1 | as_crispy_field }}
+                        {{ order_form.street_address2 | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
+                        {{ order_form.county | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
+                        {% if user.is_authenticated %}
+                            <hr class="title-divider--secondary">
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="save-user-info" class="checkout-save-input">
+                                <label for="save-user-info" class="checkout-save-label"><div></div></label>
+                            </div>
+                            <p>Save details for next time</p>
+                            <hr class="title-divider--secondary">
+                        {% else %}
+                            <hr class="title-divider--secondary">
+                            <div class="checkout-user-accounts">
+                                <a href="" class="checkout-account-links">Create an Account</a>
+                                <br>
+                                <span><i>Or</i></span>
+                                <br>
+                                <a href="" class="checkout-account-links">Login</a>
+                                <br>
+                                <span><i>To save this information</i></span>   
+                            </div>
+                            <hr class="title-divider--secondary">
+                        {% endif %}
+                    </fieldset>
+                    <fieldset class="payment-details-fieldset">
+                        <legend>Payment</legend>
+                        <!-- Stripe card element -->
+                        <div id="card-element" class="mb-4"></div>
+                        <!-- Used to display errors -->
+                        <div id="card-errors"></div>
+                        <!-- Pass client secret to the view -->
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                    </fieldset>
+                    <!-- Submit form -->
+                    <div class="checkout-payment-link">
+                        <a href="{% url 'view_bag' %}" class="button--link button--link--back mb-3">Adjust Order</a>
+                        <button id="submit-order" type="submit" class="button button--order mb-3">Place Order</button>
+                        <p>Your card will be charged | <span>£{{ grand_total|floatformat:2 }}</span></p>
+                        <hr class="title-divider--secondary">
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 col-md-12 offset-lg-1 order-1 order-lg-2">
+                <p>Order Summary ({{ product_count }})</p>
+                <div class="row">
+                    <div class="col-8">
+                        <p>Item</p>
+                    </div>
+                    <div class="col-4 text-end">
+                        <p>Total</p>
+                    </div>
+                </div>
+                <div class="checkout-cart-wrapper">
+                    {% for item in bag_items %}
+                        <div class="row mb-3">
+                            <div class="col">
+                                <a href="{% url 'single_product' item.product.id %}">
+                                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <p>{{ item.product.name }}</p>
+                                <p>QTY | {{ item.quantity }}</p>
+                            </div>
+                            <div class="col text-end">
+                                <p>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <div class="col-12 text-end">
+                        <p class="checkout-totals">Order Total | <span>£{{ total | floatformat:2 }}</span></p>
+                        <p class="checkout-totals">Delivery | <span>£{{ delivery | floatformat:2 }}</span></p>
+                        <p class="checkout-totals">Grand Total | <span>£{{ grand_total | floatformat:2 }}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="loading-overlay"></div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}
