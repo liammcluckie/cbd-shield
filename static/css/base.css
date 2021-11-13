@@ -1726,6 +1726,39 @@ header {
     height: 3px!important;
 }
 
+/* Checkout loading overlay */
+/* Code from https://blog.hubspot.com/website/css-loading-animation and customised for this project */
+
+#loading-overlay {
+    position: absolute;
+    inset: 0;
+    display: none;
+    z-index: 900;
+    margin: auto;
+    border: 20px solid var(--primary);
+    border-radius: 50%;
+    border-top: 20px solid var(--white);
+    width: 200px;
+    height: 200px;
+    animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.overlay-filter {
+    filter: blur(10px);
+    position: relative;
+    z-index: 900;
+}
+
 /* Footer */
 
 footer {
