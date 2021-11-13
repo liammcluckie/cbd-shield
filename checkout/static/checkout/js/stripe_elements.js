@@ -68,29 +68,68 @@ form.addEventListener('submit', function(ev) {
     document.body.scrollTop = 0;
     // For all other browsers
     document.documentElement.scrollTop = 0;
-    stripe.confirmCardPayment(clientSecret, {
-        payment_method: {
-            card: card,
-        }
-    }).then(function(result) {
-        if (result.error) {
-            const errorDiv = document.getElementById('card-errors');
-            errorDiv.innerHTML = `
-                <span class="stripe-card-error" role="alert">
-                    <i class="far fa-times-circle"></i>
-                </span>
-                <span class="stripe-card-error">
-                    ${result.error.message}
-                </span>
-            `;
-            document.getElementById('loading-overlay').style.display = 'none';
-            document.getElementById('checkout-container').classList.remove('overlay-filter');
-            card.update({ 'disabled': false});
-            document.getElementById('submit-order').disabled = false;
-        } else {
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
+    // Save user details
+    const userInfo = document.getElementById('save-user-info');
+    const saveInfo = Boolean(userInfo.checked);
+    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    const postData= {
+        'csrfmiddlewaretoken': csrfToken,
+        'client_secret': clientSecret,
+        'save_info': saveInfo,
+    };
+    // Post user details to cache_checkout_data
+    const url = '/checkout/cache_checkout_data/';
+    $.post(url, postData).done(function() {
+        stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: card,
+                billing_details: {
+                    name: form.full_name.value.trim(),
+                    phone: form.phone_number.value.trim(),
+                    email: form.email.value.trim(),
+                    address:{
+                        line1: form.street_address1.value.trim(),
+                        line2: form.street_address2.value.trim(),
+                        city: form.town_or_city.value.trim(),
+                        country: form.country.value.trim(),
+                        state: form.county.value.trim(),
+                    }
+                }
+            },
+            shipping: {
+                name: form.full_name.value.trim(),
+                phone: form.phone_number.value.trim(),
+                address:{
+                    line1: form.street_address1.value.trim(),
+                    line2: form.street_address2.value.trim(),
+                    city: form.town_or_city.value.trim(),
+                    country: form.country.value.trim(),
+                    postal_code: form.postcode.value.trim(),
+                    state: form.county.value.trim(),
+                }
+            },
+        }).then(function(result) {
+            if (result.error) {
+                const errorDiv = document.getElementById('card-errors');
+                errorDiv.innerHTML = `
+                    <span class="stripe-card-error" role="alert">
+                        <i class="far fa-times-circle"></i>
+                    </span>
+                    <span class="stripe-card-error">
+                        ${result.error.message}
+                    </span>
+                `;
+                document.getElementById('loading-overlay').style.display = 'none';
+                document.getElementById('checkout-container').classList.remove('overlay-filter');
+                card.update({ 'disabled': false});
+                document.getElementById('submit-order').disabled = false;
+            } else {
+                if (result.paymentIntent.status === 'succeeded') {
+                    form.submit();
+                }
             }
-        }
+        });
+    }).fail(function() {
+        location.reload();
     });
 });
