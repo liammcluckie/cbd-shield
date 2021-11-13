@@ -49,7 +49,12 @@ card.addEventListener('change', function(event) {
     }
 });
 
-// Handle and display any errors when submitting payment
+/**
+ * Handle and display any errors when submitting payment
+ * Display loading animation
+ * Add overlay class to page section
+ * Remove these if error occurs
+ * */
 
 const form = document.getElementById('payment-form');
 
@@ -57,6 +62,12 @@ form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
     document.getElementById('submit-order').disabled = true;
+    document.getElementById('loading-overlay').style.display = 'block';
+    document.getElementById('checkout-container').className = 'overlay-filter';
+    // For Safari
+    document.body.scrollTop = 0;
+    // For all other browsers
+    document.documentElement.scrollTop = 0;
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
@@ -72,6 +83,8 @@ form.addEventListener('submit', function(ev) {
                     ${result.error.message}
                 </span>
             `;
+            document.getElementById('loading-overlay').style.display = 'none';
+            document.getElementById('checkout-container').classList.remove('overlay-filter');
             card.update({ 'disabled': false});
             document.getElementById('submit-order').disabled = false;
         } else {
