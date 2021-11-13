@@ -56,7 +56,7 @@
     <header>
         {% include 'includes/navigation.html' %}
         <!-- Cart & Profile links -->
-        <div class="user-icons bg-light">
+        <div class="user-icons bg-light {% if request.get_full_path == '/' %} home-user-icons {% endif %}">
             <a href="{% url 'view_bag' %}">
                 <i class="fas fa-shopping-cart {% if request.get_full_path == '/bag/' %} icon-active {% endif %}"></i>
                 {% if grand_total %}
