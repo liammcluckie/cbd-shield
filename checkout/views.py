@@ -15,6 +15,7 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
+    """ Cache user details and return response """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -31,6 +32,11 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """ 
+    Create checkout order form fields
+    If form is valid save the order and user details
+    Process payment and redirect to relevant template
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -67,9 +73,9 @@ def checkout(request):
                         order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't "
-                        "found in our database. "
-                        "Please contact us for assistance!")
+                        "One of the products in your bag wasn't \
+                        found in our database. \
+                        Please contact us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
