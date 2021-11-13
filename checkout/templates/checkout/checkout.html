@@ -35,8 +35,8 @@
                         {% if user.is_authenticated %}
                             <hr class="title-divider--secondary">
                             <div class="checkbox-container">
-                                <input type="checkbox" class="checkout-save-input">
-                                <label for="" class="checkout-save-label"><div></div></label>
+                                <input type="checkbox" id="save-user-info" class="checkout-save-input">
+                                <label for="save-user-info" class="checkout-save-label"><div></div></label>
                             </div>
                             <p>Save details for next time</p>
                             <hr class="title-divider--secondary">
@@ -60,6 +60,8 @@
                         <div id="card-element" class="mb-4"></div>
                         <!-- Used to display errors -->
                         <div id="card-errors"></div>
+                        <!-- Pass client secret to the view -->
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
                     <!-- Submit form -->
                     <div class="checkout-payment-link">
