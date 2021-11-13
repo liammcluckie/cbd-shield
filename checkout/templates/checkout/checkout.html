@@ -3,7 +3,7 @@
 {% load bag_tools %}
 
 {% block content %}
-<section>
+<section id="checkout-container">
     <div class="container-fluid bg--secondary">
         <div class="row">
             <div class="col text-center">
@@ -108,7 +108,8 @@
             </div>
         </div>
     </div>
- </section>
+</section>
+<div id="loading-overlay"></div>
 {% endblock %}
 
 {% block postloadjs %}
