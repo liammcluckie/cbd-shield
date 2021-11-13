@@ -644,11 +644,11 @@ header {
 
 @media (max-width: 500px) {
     .user-icons {
-        bottom: -250px;
+        bottom: -252px;
     }
 }
 
-@media (max-width: 405px) {
+@media (max-width: 500px) {
     .clear-icons {
         display: block;
         height: 50px;
@@ -1440,6 +1440,13 @@ header {
 @media (max-width: 515px) {
     .col-sidebar {
         background-size: 35%;
+    }
+}
+
+@media (max-width: 500px) {
+    .update-quantity-form {
+        display: flex;
+        align-items: center;
     }
 }
 
