@@ -5,9 +5,18 @@
 
 {% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
 
+{% block header_content %}
+  <div class="container-fluid bg--secondary">
+    <div class="row">
+        <div class="col text-center">
+            <h1>{% trans "Confirm E-mail Address" %}</h1>
+            <hr class="title-divider">
+        </div>
+    </div>
+  </div>
+{% endblock %}
 
-{% block content %}
-<h1>{% trans "Confirm E-mail Address" %}</h1>
+{% block inner_content %}
 
 {% if confirmation %}
 
