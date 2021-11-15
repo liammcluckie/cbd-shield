@@ -46,10 +46,9 @@
             <div class="nav-search-box">
                 <form method="GET" action="{% url 'products' %}" name="search">
                     <label for="search_query"></label>
-                    <input type="text" class="nav-search-input" name="search_query" aria-label="Search"
-                    onmouseout="document.search.txt.value = ''">
+                    <input type="text" id="search_query" class="nav-search-input" name="search_query" aria-label="Search">
                 </form>
-                <i class="fas fa-search"></i>
+                <i id="search-icon" class="fas fa-search"></i>
             </div>
         </div>
     </div>

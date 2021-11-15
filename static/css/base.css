@@ -646,6 +646,10 @@ header {
     .user-icons {
         bottom: -252px;
     }
+
+    .home-user-icons {
+        bottom: unset!important;
+    }
 }
 
 @media (max-width: 500px) {
@@ -746,6 +750,13 @@ header {
 @media (max-width: 480px) {
     .hero-product-border {
         width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .tagline {
+        font-size: 2rem;
+        top: 60%;
     }
 }
 
