@@ -608,10 +608,37 @@ header {
     text-align: center;
     border-bottom-left-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    border-top: 2px solid var(--secondary);
+}
+
+.user-icons > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-icons > ul:hover > li > a > i,
+.user-icons > ul:focus > li > a > i,
+.user-icons > ul:hover > li > a::after,
+.user-icons > ul:focus > li > a::after {
+    color: var(--primary);
+}
+
+.dropdown-profile > i {
+    color: var(--secondary);
+    font-size: 2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.dropdown-profile::after {
+    color: var(--secondary);
+    margin-left: 0!important;
+    transition: color 0.3s ease-in-out;
 }
 
 .user-icons > a {
     display: inline-block;
+    border-left: 2px solid var(--secondary);
 }
 
 .user-icons > a > i {
