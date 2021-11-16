@@ -636,6 +636,10 @@ header {
     transition: color 0.3s ease-in-out;
 }
 
+.dropdown-item-parent > a {
+    display: inline-block;
+}
+
 .user-icons > a {
     display: inline-block;
     border-left: 2px solid var(--secondary);
@@ -671,7 +675,7 @@ header {
 
 @media (max-width: 500px) {
     .user-icons {
-        bottom: -252px;
+        bottom: -214px;
     }
 
     .home-user-icons {
@@ -1826,36 +1830,32 @@ header {
     color: var(--primary--dark)!important;
 }
 
-.allauth-inner-content > .login > div > label {
+.allauth-inner-content > form > div > label {
     margin-bottom: 1rem;
     font-family: var(--title);
     font-size: 1.35rem;
     font-weight: bold;
 }
 
-.allauth-inner-content > .login > a,
-.allauth-inner-content > .login > p > a {
+.allauth-inner-content > form > a,
+.allauth-inner-content > form > p > a {
     font-size: 1.2rem;
     margin-top: 0.5rem;
-    display: inline-block;
+    display: block;
     text-decoration: underline!important;
     transition: color 0.3s ease-in-out;
     font-weight: bold;
     letter-spacing: 1.15px;
 }
 
-.allauth-inner-content > .login > a:hover,
-.allauth-inner-content > .login > a:focus,
-.allauth-inner-content > .login > p > a:hover,
-.allauth-inner-content > .login > p > a:focus {
+.allauth-inner-content > form > a:hover,
+.allauth-inner-content > form > a:focus,
+.allauth-inner-content > form > p > a:hover,
+.allauth-inner-content > form > p > a:focus {
     color: var(--primary--dark)!important;
 }
 
-.allauth-inner-content > .login > p > a {
-    margin-bottom: 3rem;
-}
-
-.allauth-inner-content > .login > button {
+.allauth-inner-content > form > button {
     background-color: var(--white);
     outline: none;
     border: 2px solid var(--secondary);
@@ -1869,13 +1869,10 @@ header {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translate(-50%);
+    margin: 1.5rem 0;
 }
 
-.allauth-inner-content > .login > button::before {
+.allauth-inner-content > form > button::before {
     content: "\f06c";
     font-family: FontAwesome;
     font-size: 15px;
@@ -1894,16 +1891,16 @@ header {
     text-align: center;
 }
 
-.allauth-inner-content > .login > button:hover {
+.allauth-inner-content > form > button:hover {
     text-indent: -30px;
 }
 
-.allauth-inner-content > .login > button:hover::before {
+.allauth-inner-content > form > button:hover::before {
     right: 0;
     text-indent: 0px;
 }
 
-.allauth-inner-content > .login > div > div > input {
+.allauth-inner-content > form > div > div > input {
     margin-bottom: 1rem;
 }
 
