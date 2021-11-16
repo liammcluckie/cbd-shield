@@ -8,7 +8,7 @@
   <div class="container-fluid bg--secondary">
     <div class="row">
         <div class="col text-center">
-          <h1>{% trans "Sign Out" %}</h1>
+          <h1 class="products-title">{% trans "Sign Out" %}</h1>
           <hr class="title-divider">
         </div>
     </div>
@@ -21,6 +21,7 @@
 
 <form method="post" action="{% url 'account_logout' %}">
   {% csrf_token %}
+  {{ form|crispy }}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
   {% endif %}
