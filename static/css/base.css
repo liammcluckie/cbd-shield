@@ -1777,12 +1777,115 @@ header {
     z-index: 900;
 }
 
+/* Allauth forms */
+
+.allauth-inner-content {
+    border-top: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.allauth-inner-content > p > a {
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: underline!important;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.allauth-inner-content > p > a:hover,
+.allauth-inner-content > p > a:focus {
+    color: var(--primary--dark)!important;
+}
+
+.allauth-inner-content > .login > div > label {
+    margin-bottom: 1rem;
+    font-family: var(--title);
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+.allauth-inner-content > .login > a,
+.allauth-inner-content > .login > p > a {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    text-decoration: underline!important;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+    letter-spacing: 1.15px;
+}
+
+.allauth-inner-content > .login > a:hover,
+.allauth-inner-content > .login > a:focus,
+.allauth-inner-content > .login > p > a:hover,
+.allauth-inner-content > .login > p > a:focus {
+    color: var(--primary--dark)!important;
+}
+
+.allauth-inner-content > .login > p > a {
+    margin-bottom: 3rem;
+}
+
+.allauth-inner-content > .login > button {
+    background-color: var(--white);
+    outline: none;
+    border: 2px solid var(--secondary);
+    font-family: var(--body);
+    color: var(--secondary);
+    font-size: 1.5rem;
+    padding: 0.25rem 0;
+    width: 8.375rem;
+    border-radius: 8px;
+    transition: all 0.3s linear 0s;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.allauth-inner-content > .login > button::before {
+    content: "\f06c";
+    font-family: FontAwesome;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 100%;
+    background-color: var(--secondary);
+    color: var(--white);
+    border-radius: 0px 6px 6px 0px;
+    transition: all 0.2s linear 0s;
+    text-align: center;
+}
+
+.allauth-inner-content > .login > button:hover {
+    text-indent: -30px;
+}
+
+.allauth-inner-content > .login > button:hover::before {
+    right: 0;
+    text-indent: 0px;
+}
+
+.allauth-inner-content > .login > div > div > input {
+    margin-bottom: 1rem;
+}
+
 /* Footer */
 
 footer {
     margin-top: 6rem;
-    border-top: 2px solid var(--primary);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-top: 56px solid var(--primary);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: var(--primary--dark);
 }
 
