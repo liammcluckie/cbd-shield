@@ -72,17 +72,17 @@
                                 </li>
                             {% endif %}
                             <li class="dropdown-item-parent">
-                                <a class="dropdown-product-sort-link" href="">Profile</a>
+                                <a class="dropdown-product-sort-link" href="{% url 'profile' %}">Profile</a>
                             </li>
                             <li class="dropdown-item-parent">
-                                <a class="dropdown-product-sort-link" href="">Logout</a>
+                                <a class="dropdown-product-sort-link" href="{% url 'account_logout' %}">Logout</a>
                             </li>
                         {% else %}
                             <li class="dropdown-item-parent">
-                                <a class="dropdown-product-sort-link" href="">Register</a>
+                                <a class="dropdown-product-sort-link" href="{% url 'account_signup' %}">Register</a>
                             </li>
                             <li class="dropdown-item-parent">
-                                <a class="dropdown-product-sort-link" href="">Login</a>
+                                <a class="dropdown-product-sort-link" href="{% url 'account_login' %}">Login</a>
                             </li>
                         {% endif %}
                     </ul>
