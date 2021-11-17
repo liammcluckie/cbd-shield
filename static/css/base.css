@@ -1942,6 +1942,16 @@ header {
     content: '\f007';
 }
 
+.profile-orders-container {
+    max-height: 374px;
+    overflow-y: scroll;
+}
+
+.profile-orders-thead {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
 /* Footer */
 
 footer {
