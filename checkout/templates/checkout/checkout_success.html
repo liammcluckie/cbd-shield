@@ -14,6 +14,15 @@
     </div>
     <div class="container mt-5">
         <div class="clear-icons"></div>
+        {% if from_profile %}
+            <div class="row">
+                <div class="col-12">
+                    <a class="button--link button--link--back" href="{% url 'profile' %}">
+                        Back to Profile
+                    </a>
+                </div>
+            </div>
+        {% endif %}
         <div class="row">
             <div class="col-12 order-summary">
 
