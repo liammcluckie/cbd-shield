@@ -56,7 +56,7 @@
     <header>
         {% include 'includes/navigation.html' %}
         <!-- Cart & Profile links -->
-        <div class="user-icons bg-light {% if request.get_full_path == '/' %} home-user-icons {% endif %}">
+        <div class="user-icons bg-light {% if request.get_full_path == '/' %} home-user-icons {% endif %} {% if grand_total %} cart-items {% endif %}">
             <ul class="mb-2 mb-lg-0 profile-icon">
                 <li class="dropdown">
                     <a class="dropdown-toggle dropdown-profile" href="#" id="profileOptions" role="button"
