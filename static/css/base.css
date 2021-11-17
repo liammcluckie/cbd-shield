@@ -45,6 +45,7 @@ body {
 
 body,html {
     overflow-x: hidden;
+    height: 100%
 }
 
 h1,
@@ -303,7 +304,7 @@ ul,li {
 
 @media (max-width: 300px) {
     .button {
-        width: 10rem;
+        width: 100%!important;
     }
 }
 
@@ -681,12 +682,16 @@ header {
     .home-user-icons {
         bottom: unset!important;
     }
+
+    .cart-items {
+        bottom: -249px !important;
+    }
 }
 
 @media (max-width: 500px) {
     .clear-icons {
         display: block;
-        height: 50px;
+        height: 60px;
     }
 }
 
@@ -1224,6 +1229,16 @@ header {
 }
 
 /* Single Product */
+
+.header-hide {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .header-hide {
+        display: block;
+    }
+}
 
 .single-category-icon {
     margin-bottom: 1rem;
@@ -1904,9 +1919,34 @@ header {
     margin-bottom: 1rem;
 }
 
+/* Profile */
+
+#profile-update-form > * {
+    margin: 0.75rem 0;
+}
+
+.profile-title {
+    font-weight: bold;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.button--profile {
+    width: 15rem;
+    border: 2px solid var(--secondary);
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.button--profile::before {
+    content: '\f007';
+}
+
 /* Footer */
 
 footer {
+    position: sticky;
+    top: 100vh;
     margin-top: 6rem;
     border-top: 56px solid var(--primary);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

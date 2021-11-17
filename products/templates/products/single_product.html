@@ -2,9 +2,18 @@
 {% load static %}
 
 {% block content %}
-    <div class="clear-header"></div>
+<section>
     <!-- Single Product Details -->
-    <section class="container mt-5">
+    <div class="container-fluid bg--secondary header-hide">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="products-title">Shop Item</h1>
+                <hr class="title-divider">
+            </div>
+         </div>
+    </div>
+    <div class="container mt-5">
+        <div class="clear-header"></div>
         <div class="row">
             <div class="col-lg-5 col-md-6 col-sm-12">
                 <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
@@ -32,13 +41,14 @@
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
             </div>
-       </div>
-    </section>
+        </div>
+    </div>
     <!-- End of Single Product Details -->
     <!-- Product Reviews -->
-    <section class="container mt-5">
-       <hr class="single-product-divider">
-    </section>
+    <div class="container mt-5">
+        <hr class="single-product-divider">
+    </div>
     <!-- End of Product Reviews -->
+</section>
 
 {% endblock %}
