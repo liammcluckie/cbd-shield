@@ -62,7 +62,7 @@
                     <a class="dropdown-toggle dropdown-profile" href="#" id="profileOptions" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <!-- Icon -->
-                        <i class="fas fa-user"></i>   
+                        <i class="fas fa-user {% if request.get_full_path == '/profile/' %} icon-active {% endif %}"></i>   
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="profileOptions">
                         {% if request.user.is_authenticated %}
