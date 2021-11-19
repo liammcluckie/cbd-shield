@@ -68,7 +68,7 @@
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                                 <li class="dropdown-item-parent">
-                                    <a class="dropdown-product-sort-link" href="">Product Management</a>
+                                    <a class="dropdown-product-sort-link" href="{% url 'add_product' %}">Product Management</a>
                                 </li>
                             {% endif %}
                             <li class="dropdown-item-parent">
