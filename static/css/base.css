@@ -261,13 +261,23 @@ ul,li {
     text-indent: 0px;
 }
 
-.button--cart {
+.button--cart,
+.button--add {
     border: 2px solid var(--primary--dark);
     font-family: var(--body);
     color: var(--primary--dark);
     z-index: 300;
     padding: 0.5rem 1.25rem;
     width: 12rem;
+}
+
+.button--add {
+    padding: 0.25rem 0!important;
+}
+
+.button--add::before {
+    content: "\f067";
+    background-color: var(--primary--dark);
 }
 
 .button--cart:before {
@@ -294,6 +304,17 @@ ul,li {
 .button--order:before {
     content: "£";
     font-size: 25px;
+}
+
+.button--cancel {
+    border: 2px solid var(--danger);
+    color: var(--danger)!important;
+    text-align: center;
+}
+
+.button--cancel::before {
+    content: "\f00d";
+    background-color: var(--danger);
 }
 
 @media (max-width: 992px) {
@@ -1950,6 +1971,38 @@ header {
 .profile-orders-thead {
     font-size: 1.15rem;
     font-weight: bold;
+}
+
+/* Add Product */
+
+.product-management-title {
+    font-weight: bold;
+}
+
+.add-product-container {
+    border-top: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+    padding: 1.5rem 0;
+}
+
+.add-product-container > form > div {
+    margin-bottom: 1rem;
+}
+
+.add-product-container > form > div:last-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-product-container > form > div:last-of-type > button {
+    margin-left: 1rem;
+}
+
+.add-product-container > form > div > label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+
 }
 
 /* Footer */
