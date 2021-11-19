@@ -16,7 +16,11 @@
         <div class="clear-header"></div>
         <div class="row">
             <div class="col-lg-5 col-md-6 col-sm-12">
-                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+                {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+                {% else %}
+                    <img src="{{ MEDIA_URL }}noimage.png" alt="No image of product available" class="product-images">
+                {% endif %}
                 <hr class="single-product-divider d-md-none">
             </div>
             <div class="col lg-6 offset-lg-1 col-md-6 col-sm-12 single-product">

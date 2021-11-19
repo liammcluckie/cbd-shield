@@ -87,7 +87,11 @@
                         <div class="row mb-3">
                             <div class="col">
                                 <a href="{% url 'single_product' item.product.id %}">
-                                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                    {% if item.product.image %}
+                                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                    {% else %}
+                                        <img src="{{ MEDIA_URL }}noimage.png" alt="No image of product available">
+                                    {% endif %}
                                 </a>
                             </div>
                             <div class="col">

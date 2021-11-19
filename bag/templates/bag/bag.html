@@ -38,7 +38,11 @@
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="w-25">
-                                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="cart-image">
+                                        {% if item.product.image %}
+                                            <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="cart-image">
+                                        {% else %}
+                                            <img src="{{ MEDIA_URL }}noimage.png" alt="No image of product available" class="cart-image">
+                                        {% endif %}
                                         <p><strong>{{ item.product.name }}</strong></p>
                                         <p class="text-muted">#{{ item.product.sku }}</p>
                                         <p>
