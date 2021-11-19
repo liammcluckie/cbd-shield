@@ -275,6 +275,10 @@ ul,li {
     padding: 0.25rem 0!important;
 }
 
+.button--add--large {
+    width: 14rem;
+}
+
 .button--add::before {
     content: "\f067";
     background-color: var(--primary--dark);
@@ -2003,6 +2007,65 @@ header {
     margin-bottom: 0.5rem;
     font-weight: bold;
 
+}
+
+/* Product Management */
+
+.delete-modal-launch {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+}
+
+.edit-product-link {
+    text-decoration: underline!important;
+    transition: color 0.3s ease-in-out;
+}
+
+.delete-modal-launch:hover,
+.delete-modal-launch:focus {
+    color: var(--danger);
+}
+
+.edit-product-link:hover,
+.edit-product-link:focus {
+    color: var(--primary--dark)!important;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-modal-cancel {
+    border: 1px solid var(--secondary)!important;
+    background-color: var(--secondary)!important;
+    color: var(--white)!important;
+    transition: opacity 0.3s ease-in-out!important;
+}
+
+.btn-modal-delete {
+    border: 1px solid var(--danger)!important;
+    background-color: var(--danger)!important;
+    color: var(--white)!important;
+    transition: opacity 0.3s ease-in-out!important;
+}
+
+.btn-modal-cancel:hover,
+.btn-modal-cancel:focus,
+.btn-modal-delete:hover,
+.btn-modal-delete:focus {
+    opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+    .delete-modal-launch {
+        font-size: 1.25rem;
+    }
 }
 
 /* Footer */
