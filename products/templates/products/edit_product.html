@@ -19,9 +19,15 @@
                 <div class="add-product-container">
                     <form action="{% url 'edit_product' product.id %}" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
-                        {{ form | crispy }}
+                        {% for field in form %}
+                            {% if field.name != 'image' %}
+                                {{ field | as_crispy_field }}
+                            {% else %}
+                                {{ field }}
+                            {% endif %}
+                        {% endfor %}
                         <div>
-                            <a href="" class="button button--cancel">Cancel</a>
+                            <a href="{% url 'products' %}" class="button button--cancel">Cancel</a>
                             <button type="submit" class="button button--add button--add--large">Update Product</button>
                         </div>
                     </form>
@@ -30,4 +36,9 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+        <script src="{% static 'products/js/file_input_value.js' %}"></script>
 {% endblock %}
