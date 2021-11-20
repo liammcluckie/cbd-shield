@@ -43,11 +43,11 @@
                         {% else %}
                             <hr class="title-divider--secondary">
                             <div class="checkout-user-accounts">
-                                <a href="" class="checkout-account-links">Create an Account</a>
+                                <a href="{% url 'account_signup' %}" class="checkout-account-links">Create an Account</a>
                                 <br>
                                 <span><i>Or</i></span>
                                 <br>
-                                <a href="" class="checkout-account-links">Login</a>
+                                <a href="{% url 'account_login' %}" class="checkout-account-links">Login</a>
                                 <br>
                                 <span><i>To save this information</i></span>   
                             </div>
