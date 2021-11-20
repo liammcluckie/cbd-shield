@@ -2095,6 +2095,39 @@ header {
     color: var(--white);
 }
 
+/* Reviews */
+
+.review-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.review-stars {
+    color: var(--primary--dark);
+    font-size: 1.25rem;
+}
+
+.review-user > p {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+}
+
+.review-content {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.review-user-links {
+    text-decoration: underline!important;
+    transition: color 0.3s ease-in-out
+}
+
+.review-user-links:hover,
+.review-user-links:focus {
+    color: var(--primary--dark)!important;
+}
+
 /* Footer */
 
 footer {
