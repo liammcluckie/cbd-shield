@@ -2068,6 +2068,33 @@ header {
     }
 }
 
+/* Image File Input */
+
+.image-input-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#new-image {
+    opacity: 0;
+}
+
+.image-input-wrapper {
+    position: relative;
+}
+
+.input-button {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: var(--primary--dark);
+    font-weight: bold;
+    color: var(--white);
+}
+
 /* Footer */
 
 footer {
