@@ -79,6 +79,89 @@
     <!-- Product Reviews -->
     <div class="container mt-5">
         <hr class="single-product-divider">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="review-title mb-5">Reviews</h2>
+            </div>
+            <div class="col-12 col-lg-5 mb-5">
+                {% if request.user.is_authenticated %}
+                    <form action="{% url 'add_product_review' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group mb-3">
+                            <label for="stars">Product Rating</label>
+                            <select name="stars" id="stars" class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5" selected>5</option>
+                            </select>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="content">Review</label>
+                        </div>
+                        <div class="form-group mb-3">
+                            <textarea class="form-control" name="content" id="content" cols="30" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="button button--add">Add Review</button>
+                    </form>
+                {% else %}
+                    <h3>
+                        <em>
+                            Please
+                            <a href="{% url 'account_login' %}" class="review-user-links">
+                                Sign In
+                            </a>
+                            or
+                            <a href="{% url 'account_signup' %}" class="review-user-links">
+                                Register
+                            </a>
+                            to add reviews
+                        </em>
+                    </h3>
+                {% endif %}
+            </div>
+            <div class="col-12 col-lg-6 offset-lg-1">
+                {% for review in product.reviews.all %}
+                    <div class="review-stars">
+                        {% if review.stars == 1 %}
+                            <i class="fas fa-star"></i>
+                        {% elif review.stars == 2 %}
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        {% elif review.stars == 3 %}
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        {% elif review.stars == 4 %}
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        {% elif review.stars == 5 %}
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        {% endif %}
+                    </div>
+                    <div class="review-content">
+                        <p>"{{ review.content }}"</p>
+                    </div>
+                    <div class="review-user">
+                        <p><em>{{ review.user }}</em></p>
+                        <p><em>{{ review.date_added|date:"d-m-Y" }}</em></p>
+                    </div>
+                    <hr class="single-product-divider">
+                {% empty %}
+                    <div>
+                        <h3><em>This product has no reviews yet.</em></h3>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
     <!-- End of Product Reviews -->
 </section>
