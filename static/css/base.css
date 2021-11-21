@@ -89,6 +89,12 @@ img {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .md-text-center {
+        text-align: center;
+    }
+}
+
 .text-end {
     text-align: end;
 }
@@ -126,6 +132,10 @@ ul,li {
 
 .no-margin-bottom {
     margin-bottom: 0!important;
+}
+
+.no-padding {
+    padding: 0!important;
 }
 
 .button--link {
@@ -213,6 +223,15 @@ ul,li {
 
 .button--link--cart:before {
     content: '\f07a';
+}
+
+.button--link--post {
+    border-bottom: 2px solid var(--secondary);
+}
+
+.button--link--post::before {
+    content: '\f061';
+    color: var(--secondary);
 }
 
 /* Code taken from https://codepen.io/foxeisen/pen/bqZxLa and customised for this project */
@@ -355,6 +374,29 @@ ul,li {
         display: block;
         height: 50px;
     }
+}
+
+.back-to {
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--primary--dark);
+    background-color: var(--primary--dark);
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.back-to:hover,
+.back-to:focus {
+    transform: translateX(-10px);
+}
+
+.back-to > i {
+    font-size: 3.75rem;
+    color: var(--white);
 }
 
 /* Nav */
@@ -2134,6 +2176,82 @@ header {
     font-weight: bold;
     display: none;
     margin-top: 1.5rem;
+}
+
+/* All Blog */
+
+.blog-content-container {
+    border: 5px solid var(--secondary);
+    border-radius: 8px;
+    background-color: var(--white);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.blog-excerpt-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    height: 100%;
+}
+
+.blog-title {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.blog-description {
+    font-size: 1.5rem;
+}
+
+.blog-overview-image {
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 576px) {
+    .blog-container {
+        width: 90%!important;
+    }
+}
+
+@media (max-width: 500px) {
+    .blog-title {
+        font-size: 1.75rem;
+    }
+
+    .blog-description {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .blog-excerpt-container {
+        padding: 1.25rem;
+    }
+}
+
+/* Single Blog */
+
+.post-intro {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.post-content {
+    font-size: 1.25rem;
+}
+
+.post-content > p {
+    margin-bottom: 2rem;
+}
+
+.post-content-divider {
+    height: 3px!important;
+    opacity: 1!important;
+    color: var(--secondary);
+    width: 50%;
+    margin: 2rem auto;
 }
 
 /* Footer */

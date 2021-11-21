@@ -12,8 +12,17 @@
             </div>
          </div>
     </div>
+    <div class="clear-header"></div>
+    <div class="container-fluid m-md-5 mt-5 mb-5 ">
+        <div class="row">
+            <div class="col-12 md-text-center">
+                <a href="{% url 'products' %}" class="back-to">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="container mt-5">
-        <div class="clear-header"></div>
         <div class="row">
             <div class="col-lg-5 col-md-6 col-sm-12">
                 {% if product.image %}
