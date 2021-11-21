@@ -42,7 +42,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card-wrapper">
                         <div class="custom-card">
-                            <img src="../../../media/{{ product.category }}.png" alt="Illustration displaying cbd for {{ product.category }}" class="product-category-badge">
+                            <img src="{{ MEDIA_URL }}{{ product.category }}.png" alt="Illustration displaying cbd for {{ product.category }}" class="product-category-badge">
                             {% if product.image %}
                                 <img src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy" class="product-card-image">
                             {% else %}
