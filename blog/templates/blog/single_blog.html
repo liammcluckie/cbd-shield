@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section>
+        <div class="container-fluid bg--secondary">
+            <div class="row">
+                <div class="col text-center">
+                    <h1 class="products-title">Blog Post</h1>
+                    <hr class="title-divider">
+                </div>
+            </div>
+        </div>
+        <div class="clear-icons"></div>
+        <div class="container-fluid m-md-5 mt-5 mb-5 ">
+            <div class="row">
+                <div class="col-12 md-text-center">
+                    <a href="{% url 'blog' %}" class="back-to">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="mb-4 mt-4 blog-title">{{ blog.title }}</h2>
+                    <p><em>Published | {{ blog.pub_date }}</em></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 col-12 mt-4">
+                    {% if blog.image %}
+                        <img src="{{ blog.image.url }}" alt="Image representing blog post - {{ blog.title }}" class="blog-overview-image">
+                    {% else %}
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="No image of blog post available" class="blog-overview-image">
+                    {% endif %} 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <p class="post-intro text-center mb-4">{{ blog.description }}</p>
+                    <hr class="post-content-divider">
+                    <div class="post-content">
+                        <p>{{ blog.text|linebreaks }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}
