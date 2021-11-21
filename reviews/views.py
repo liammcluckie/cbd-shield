@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import ProductReview
 from products.models import Product
 
 
+@login_required
 def add_product_review(request, product_id):
     """
     Get product object
