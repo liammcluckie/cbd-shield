@@ -2128,6 +2128,14 @@ header {
     color: var(--primary--dark)!important;
 }
 
+#review-error {
+    color: var(--danger);
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: none;
+    margin-top: 1.5rem;
+}
+
 /* Footer */
 
 footer {
