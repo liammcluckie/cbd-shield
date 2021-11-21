@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section>
+        <div class="container-fluid bg--secondary">
+            <div class="row">
+                <div class="col text-center">
+                    <h1 class="products-title">Blog</h1>
+                    <hr class="title-divider">
+                </div>
+            </div>
+        </div>
+        <div class="clear-icons"></div>
+        <article class="container blog-container">
+        {% for blog in blogs %}
+            {% if blog.published %}
+                <div class="row mt-5 mb-5">
+                    <div class="col-12">
+                        <div class="row blog-content-container">
+                            <div class="col-lg-6 col-12 no-padding">
+                                {% if blog.image %}
+                                    <img src="{{ blog.image.url }}" alt="Image representing blog post - {{ blog.title }}" class="blog-overview-image">
+                                {% else %}
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="No image of blog post available" class="blog-overview-image">
+                                {% endif %} 
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="blog-excerpt-container">
+                                    <h2 class="mb-4 blog-title">{{ blog.title }}</h2>
+                                    <p class="mb-4 blog-description">{{ blog.description }}</p>
+                                    <div class="mb-4">
+                                        <a href="{% url 'single_blog' blog.id %}" class="button--link button--link--post">Read Article</a>
+                                    </div>
+                                    <p><em>Published | {{ blog.pub_date }}</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        </article>
+    </section>
+    
+{% endblock %}
