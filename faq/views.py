@@ -1,3 +1,13 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Faq
+
+
+def all_faq(reqest):
+    faqs = Faq.objects.all()
+
+    context = {
+        'faqs': faqs,
+    }
+
+    return render(request, 'faq/faq.html', context)
