@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section>
+        <div class="container-fluid bg--secondary">
+            <div class="row">
+                <div class="col text-center">
+                    <h1 class="products-title">FAQ</h1>
+                    <hr class="title-divider">
+                </div>
+            </div>
+        </div>
+        <div class="clear-icons"></div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-12 text-center">
+                    <p class="faq-intro mb-5">
+                        CBD and hemp based products are becoming an increasingly popular way to improve well-being and 
+                        mindfulness but it can be confusing and sometimes overwhelming. Let us answer some questions.
+                    </p>
+                    <hr class="intro-divider">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-8 offset-lg-2 col-12">
+                    <!-- Accordion taken from https://getbootstrap.com/docs/5.1/components/accordion/ and customised -->
+                    <div class="accordion" id="accordionExample">
+                        {% for faq in faqs %}
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading{{ faq.item_id_number }}">
+                                    <button class="accordion-button {% if not forloop.first %} collapsed {% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ faq.item_id_number }}"
+                                        aria-expanded="{% if forloop.first %} true {% else %} false {% endif %}" aria-controls="collapse{{ faq.item_id_number }}">
+                                        {{ faq.question }}
+                                    </button>
+                                </h2>
+                                <div id="collapse{{ faq.item_id_number }}" class="{% if forloop.first %} show {% else %} accordion-collapse collapse {% endif %}" aria-labelledby="heading{{ faq.item_id_number }}"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        {{ faq.answer }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
