@@ -36,7 +36,7 @@ class OrderForm(forms.ModelForm):
         self.fields['postcode'].required = True
         self.fields['county'].required = True
         for field in self.fields:
-            if field !='country':
+            if field != 'country':
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
                 else:

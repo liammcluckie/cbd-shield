@@ -5,6 +5,10 @@ from datetime import datetime
 
 
 class BlogPost(models.Model):
+    """
+    Create blog post fields in DB and order by
+    date published
+    """
     title = models.CharField(max_length=255)
     image = models.ImageField(blank=True, null=True)
     text = models.TextField()
@@ -20,4 +24,4 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.title
-    
+
