@@ -30,5 +30,6 @@
    ],
    "[html]": {
       "editor.defaultFormatter": "vscode.html-language-features"
-   }
+   },
+   "python.pythonPath": "/home/gitpod/.pyenv/versions/3.8.12/bin/python"
 }
