@@ -2254,6 +2254,54 @@ header {
     margin: 2rem auto;
 }
 
+/* FAQ */
+
+.faq-intro {
+    font-size: 1.25rem;
+}
+
+.intro-divider {
+    color: var(--secondary)!important;
+    height: 2px!important;
+    opacity: 1!important;
+    width: 70%;
+    margin: auto;
+}
+
+.accordion-button {
+    font-size: 1.5rem!important;
+    font-weight: bold;
+    color: var(--primary--dark)!important;
+    background-color: var(--body)!important;
+    font-size: 2rem!important;
+}
+
+.accordion-header {
+    border-bottom: 2px solid var(--primary--dark)!important;
+}
+
+.accordion-item {
+    border: none!important;
+    background-color: var(--body)!important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--body)!important;
+    box-shadow: unset!important;
+}
+
+.accordion-button:focus {
+    box-shadow: unset!important;
+}
+
+.accordion-button::after {
+    filter: invert(70%) sepia(6%) saturate(3662%) hue-rotate(67deg) brightness(94%) contrast(81%);
+}
+
+.accordion-body {
+    font-size: 1.25rem;
+}
+
 /* Footer */
 
 footer {
