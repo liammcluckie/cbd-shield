@@ -3,7 +3,8 @@ from django.shortcuts import render
 from .models import Faq
 
 
-def all_faq(reqest):
+def all_faq(request):
+    """ Retrieve and pass all faq's from model to template """
     faqs = Faq.objects.all()
 
     context = {
