@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="checkout-container">
+    <div class="container-fluid bg--secondary">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="products-title">404 Error</h1>
+                <hr class="title-divider">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="clear-icons"></div>
+        <div class="row">
+           <div class="col-12">
+               <h2>Whoops! You've taken a wrong turn.</h2>
+                <p>Don't worry though we can help, time to go home!</p>
+                <a href="{% url 'home' %}" class="button--link button--link--back">Go Home</a>
+           </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

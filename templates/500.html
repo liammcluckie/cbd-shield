@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="checkout-container">
+    <div class="container-fluid bg--secondary">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="products-title">500 Error</h1>
+                <hr class="title-divider">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="clear-icons"></div>
+        <div class="row">
+           <div class="col-12">
+               <h2>Whoops! Somethings gone wrong, it's not you it's us!</h2>
+                <p>Don't worry though we can help...</p>
+                <p>Try again and if the problem perists please contact us.</p>
+                <a href="{% url 'home' %}" class="button--link button--link--back">Go Home</a>
+           </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
