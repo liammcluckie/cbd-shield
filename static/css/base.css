@@ -1937,7 +1937,8 @@ header {
     color: var(--primary--dark)!important;
 }
 
-.allauth-inner-content > form > button {
+.allauth-inner-content > form > button,
+.allauth-inner-content > form > input[type=submit] {
     background-color: var(--white);
     outline: none;
     border: 2px solid var(--secondary);
@@ -1945,7 +1946,7 @@ header {
     color: var(--secondary);
     font-size: 1.5rem;
     padding: 0.25rem 0;
-    width: 8.375rem;
+    width: 100%;
     border-radius: 8px;
     transition: all 0.3s linear 0s;
     display: inline-block;
@@ -1954,7 +1955,8 @@ header {
     margin: 1.5rem 0;
 }
 
-.allauth-inner-content > form > button::before {
+.allauth-inner-content > form > button::before,
+.allauth-inner-content > form > input[type=submit]::before {
     content: "\f06c";
     font-family: FontAwesome;
     font-size: 15px;
@@ -1973,11 +1975,13 @@ header {
     text-align: center;
 }
 
-.allauth-inner-content > form > button:hover {
+.allauth-inner-content > form > button:hover,
+.allauth-inner-content > form > input[type=submit]:hover {
     text-indent: -30px;
 }
 
-.allauth-inner-content > form > button:hover::before {
+.allauth-inner-content > form > button:hover::before,
+.allauth-inner-content > form > input[type=submit]:hover::before {
     right: 0;
     text-indent: 0px;
 }
