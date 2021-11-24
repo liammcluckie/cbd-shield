@@ -107,8 +107,10 @@
                 <div class="newsletter white text-center">
                     <h3>Want First Dibs?</h3>
                     <h4>Our subscribers receive exclusive offers, product releases and are the first to find out about our upcoming events</h4>
-                    <form action="" class="newsletter-signup">
-                        <input type="email" class="newsletter-input" placeholder="Email Address">
+                    <form action="{% url 'add_user_signup' %}" method="POST" class="newsletter-signup">
+                        {% csrf_token %}
+                        <label for="newsletter_signup"></label>
+                        <input type="email" name="newsletter_signup" id="newsletter_signup" class="newsletter-input" placeholder="Email Address">
                         <button type="submit" class="button">Sign Up</button>
                     </form>
                 </div>
