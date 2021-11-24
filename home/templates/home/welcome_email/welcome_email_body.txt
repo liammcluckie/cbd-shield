@@ -1,0 +1,10 @@
+Welcome {{ user_email }}!
+
+Thank you for signing up to CBD Shields newsletter. You will now be the first to recieve offers, discount and all that great stuff! We also like to use this platform
+to educate people on all the amazing natural, healing uses for CBD as well as offer our services if you have any questions at all.
+
+That's all from us for now but keep an eye on your inbox, we'll be popping up soon.
+
+Best wishes,
+
+CBD Shield Team/Family
