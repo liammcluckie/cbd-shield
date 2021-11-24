@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
 
 
 from .models import NewsletterRegister
@@ -14,6 +17,7 @@ def index(request):
 def add_user_signup(request):
     """
     Add users email to model DB
+    On form submit send new user a welcome email
     """
 
     if request.method == 'POST':
@@ -23,6 +27,19 @@ def add_user_signup(request):
 
         messages.success(request, 'Thanks for signing up to our newsletter. \
             Check your inbox soon for our welcome email!')
+
+        welcome_email = user_email
+        subject = render_to_string(
+            'home/welcome_email/welcome_email_subject.txt')
+        body = render_to_string(
+            'home/welcome_email/welcome_email_body.txt',
+            {'user_email': user_email, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [welcome_email]
+        )
 
         return(redirect(reverse('home')))
     else:
