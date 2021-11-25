@@ -381,8 +381,8 @@ ul,li {
     border: 1px solid var(--primary--dark);
     background-color: var(--primary--dark);
     border-radius: 50%;
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 3rem;
+    height: 3rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -395,7 +395,7 @@ ul,li {
 }
 
 .back-to > i {
-    font-size: 3.75rem;
+    font-size: 2.25rem;
     color: var(--white);
 }
 
