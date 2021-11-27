@@ -275,3 +275,32 @@ CBD shield are a modern health brand producing healing products using natural in
 - Imagery will be featured throughout this website in such features as hero's, cta's, products, faq/about, and general content sections. There will be a mix of imagery subjects such as athletes and sportspeople, general lifestyle, and environmental subject matters. Other than specific product images all other images will feature a person as a subject, whether this be using the products, lifestyle images of desireable subjects, or athletes taking part in their sport. The reason for using these types of images is to make the use of the products relatable to the consumer, as well as displaying the varied healing/recovery uses of the products.
 
 - Icons will be featured throughout this site with minimalist use. The main section featuring icons will be a category card display that uses icons to portray the different uses of those products. Icons may also feature to add small details of illustration to sections as well as in some hover effects.
+
+## Database Model
+
+- This project uses two types of databases, one for local development and one for the deployed production version. Locally it uses Django's built in [MySQL](https://www.mysql.com/) database. For the deployed version the database used is [PostgreSQL](https://www.postgresql.org/) with psycopg for performance reasons.
+
+- [MySQL](https://www.mysql.com/) - is an open-source relational database management system. A relational database organizes data into one or more data tables in which data types may be related to each other; these relations help structure the data. SQL is a language programmers use to create, modify and extract data from the relational database, as well as control user access to the database.
+
+- [PostgreSQL](https://www.postgresql.org/) - PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
+
+---
+
+### Database Schema
+
+- The database schema for this project can be split into two main models, users and products. Both of these models are relational to each other and also have further relation models listed below.
+
+- Users - Other relational models to the users table are;
+    - Profile - This can only be created if the user has registered and confirmed their email address. The details to populate the profile are taken from the user model such as email and name.
+    - Reviews - Reviews can only be added by authenticated users, when a user adds a new review the review is saved to the database with the users email address attached.
+    - Newsletter - The newsletter sign up form is available to all users of the site. Once the form is validated the users email address is stored in the Newsletter model.
+
+- Products - Other relational models to the products table are;
+    - Orders - These are created when the user completes an order, it contains product details as well user details, which if selected will be added to the profile model.
+    - Categories - The category pk number is shared with the product model in order to effectively assign categories to the products.
+    - Order Line Items - This is created when the user completes an order and only holds the product details which are then shared with the profile model.
+
+See image below for the database model created for this project.
+
+![Database model diagram chart](readme-screenshots/database-model.png)
+
