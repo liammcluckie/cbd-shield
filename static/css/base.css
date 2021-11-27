@@ -2306,6 +2306,20 @@ header {
     font-size: 1.25rem;
 }
 
+/* Error Templates */
+
+.error-title {
+    font-size: 3rem;
+}
+
+.error-message {
+    font-size: 1.75rem;
+}
+
+.error-button {
+    font-size: 2rem;
+}
+
 /* Footer */
 
 footer {
