@@ -14,10 +14,10 @@
     <div class="container mt-5">
         <div class="clear-icons"></div>
         <div class="row">
-           <div class="col-12">
-               <h2>Whoops! You've taken a wrong turn.</h2>
-                <p>Don't worry though we can help, time to go home!</p>
-                <a href="{% url 'home' %}" class="button--link button--link--back">Go Home</a>
+           <div class="col-12 text-center">
+               <h2 class="error-title mb-3">Whoops! You've taken a wrong turn.</h2>
+                <p class="error-message mb-3">Don't worry though we can help, time to go home!</p>
+                <a href="{% url 'home' %}" class="button--link button--link--back error-button">Go Home</a>
            </div>
         </div>
     </div>
