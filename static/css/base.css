@@ -501,6 +501,13 @@ header {
     text-align: center;
 }
 
+.nav-link:focus,
+.nav-link:focus-visible,
+.nav-link:active {
+    outline: none!important;
+    box-shadow: none!important;
+}
+
 .nav-item:after,
 .footer-nav-item:after {
     content: '';
