@@ -6,7 +6,7 @@ This is a confirmation of your order. Listed below are your order details.
 
 Order Total - £{{ order.order_total }}
 Delivery - £{{ order.delivery_cost }}
-Grand Total = £{{ order.grand_total }}
+Grand Total - £{{ order.grand_total }}
 
 Your shipping address is - 
 {{ order.street_address1 }}
