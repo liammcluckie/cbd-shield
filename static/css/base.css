@@ -501,6 +501,9 @@ header {
     text-align: center;
 }
 
+.dropdown-toggle:focus,
+.dropdown-toggle:focus-visible,
+.dropdown-toggle:active
 .nav-item:focus,
 .nav-item:focus-visible,
 .nav-item:active
