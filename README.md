@@ -1,6 +1,6 @@
 # CBD Shield
 
-[View Live Project Here](#)
+[View Live Project Here](https://cbd-shield.herokuapp.com/)
 
 ![Screenshot of website on multiple devices](readme-screenshots/testing/responsive-screenshot.png)
 
@@ -39,6 +39,7 @@ CBD shield are a modern health brand producing healing products using natural in
 - [Testing Document](TESTING.md)
 
 ### 7. [Deployment](#deployment)
+- [Deployment Document](DEPLOYMENT.md)
 
 #### 7a. Version Control
 
@@ -304,3 +305,213 @@ See image below for the database model created for this project.
 
 ![Database model diagram chart](readme-screenshots/database-model.png)
 
+## Features
+
+### Existing Features
+
+- Responsive on all devices
+
+- All clickable elements contain an interaction animation
+
+- Toast Success, error, info and warning messages are displayed throughout the site whenever there is user interaction required,
+
+- Custom error pages
+
+- All forms are validated using a combination of Python, Javascript and HTML attributes
+
+- Auto updating shopping cart feature.
+
+- A back to top button implemented throughout that only displays once the user has scrolled down the page a sufficient amount. This is to
+improve the UX of the site.
+
+- A search bar placed in the main navigation to allow users to quickly search for products.
+
+---
+
+#### Specific Landing Page Features
+
+- A hero that includes a call to action that directs users to the sites ecommerce section.
+
+- A category section that shows all the medical/health benefits of the products that act as links to the shop with a search query for those specific categories.
+
+- About section that gives further insight into the company and it's products as well as a link to the FAQ page for further info.
+
+- Newsletter sign up form
+
+---
+
+#### Specific Shop Page Features
+
+- Interactive cards displaying all the products with the category icon displayed on the card and a 'quick' add to cart button.
+
+- A dropdown list that allows the user to sort products by price and category.
+
+---
+
+#### Specifc Single Product Page Features
+
+- If user is admin they can access the product management section through links displayed.
+
+- Review form that allows authenticated users to post a product review.
+
+- Ability to add varying quantities of the product to their individual cart.
+
+- A back button to direct the user back to the products page to improve UX.
+
+---
+
+#### Specific Blog Page Features
+
+- Alternatively designed card elements that feature a post excerpt, post published date and time and a link to the full post.
+
+---
+
+#### Specific FAQ Page Features
+
+- Accordion used to display FAQ content in an informative and interactive way to the user without cluttering the page with content.
+
+---
+
+#### Specific Cart Page Features
+
+- A responsive table displaying the users shopping cart.
+
+- Adjustable product quantity input with full functionality.
+
+---
+
+#### Specific Checkout Page Features
+
+- Integrated Stripe payment element.
+
+- Validated user details and delivery form.
+
+- Functioning checkbox to save users details to profile.
+
+- Responsive table showing cart contents.
+
+---
+
+#### Specific Profile Page Features
+
+- Users delivery information that can be amended and updated.
+
+- Responsive table displaying previous order history.
+
+---
+
+### Future Features
+
+- Testimonial slideshow on FAQ page.
+
+- User wishlist allowing authenticated users to add products to their wishlist.
+
+- A products carousel on the landing page that chooses random products to display to the user.
+
+- A contact form page to replace the footer Contact ```mailto:``` link.
+
+- Add pagination to the products and blog page to reduce the need to scroll and improve overall UX.
+
+- Improve the Profile page by allowing users to upload profile pictures and add further information such as a bio.
+
+## Technologies Used
+
+### Syntax
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+    - HTML5 is a markup language used for structuring and presenting content on the internet.
+
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+    - Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+    - Javascript is a lightweight, interpreted, object-oriented language with first-class functions, and is best known as the scripting language for Web pages, but it's used in many
+    non-browser environments as well.
+
+- [Python](https://www.python.org/)
+    - Python is an interpreted high-level general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation.
+
+---
+
+### Frameworks, Libraries & Programmes
+
+- [Balsamiq](https://balsamiq.com/)
+    - The Balsamiq application was used to create wireframes for each website page on various device screen sizes.
+
+- [Font Awesome](https://fontawesome.com/)
+    - Used to display icons as well as the social media icons in the footer.
+
+- [Icons 8](https://icons8.com/)
+    - Used for the category icons.
+
+- [Online PNG Tools](https://onlinepngtools.com/)
+    - Used for editing png images, specifically giving transparent backgrounds.
+
+- [SVG OMG](https://jakearchibald.github.io/svgomg/)
+    - A web app that takes an svg image and converts the code into clean inline svg code.
+
+- [Bootstrap](https://getbootstrap.com/)
+    - Bootstrap was used throughout the site for responsiveness using the grid system, all forms and all modals.
+
+- [Google Fonts](https://fonts.google.com/)
+    - Used to import the two fonts used throughout the site 'Lora' and 'Open Sans'.
+
+- [GitHub](https://github.com/)
+    - Used to host the entire repository for the project.
+
+- [GitPod](https://gitpod.io/workspaces/)
+    - The code editor used to build the entire project.
+
+- [TinyPNG](https://tinypng.com/)
+    -  Used this to compress all the images used on the website to decrease the file size and increase website load speed.
+
+- [Favicon](https://favicon.io/)
+    - Used to generate the websites favicon logo of various sizes for different devices.
+
+- [Am I Responsive](http://ami.responsivedesign.is/)
+    - A tool to check how the website appears and the functionality on various devices. The image at the top of this document was generated from this website.
+
+- [Responsinator](http://www.responsinator.com/)
+    - Similar to [Am I responsive](http://ami.responsivedesign.is/) this is a web based application that allows a website to be checked an a large amount of devices in portrait and 
+    landscape view.
+
+- [W3C Validator HTML](https://validator.w3.org/) & [W3C Validator CSS](https://jigsaw.w3.org/css-validator/)
+    - Both of these were used to test all the code for the project whilst working and for the finished website to check for valid HTML and CSS.
+
+- [JSHint](https://jshint.com/)
+    - This is a tool used to detect errors or potential problems within Javascript code, it was used to test and validate all Javascript written for this project.
+
+- [CSS Autoprefixer](https://autoprefixer.github.io/)
+    - This was used to add vendor prefixes to the CSS used in the project to increase cross browser compatibility.
+
+- [Pylint](https://www.pylint.org/)
+    - Pylint is a source-code, bug and quality checker for the Python programming language.
+
+- [Heroku](https://www.heroku.com)
+    - Heroku is a cloud platform as a service supporting several programming languages including Java, Node.js, Scala, Clojure, Python, PHP, and Go.
+
+- [AWS](https://aws.amazon.com/)
+    - Amazon Web Services, Inc. is a subsidiary of Amazon providing on-demand cloud computing platforms.
+
+- [JQuery](https://jquery.com/)
+    - jQuery is a JavaScript library that allows web developers to add extra functionality to their websites. It is open source and provided for free under the MIT license.
+
+- [Django](https://www.djangoproject.com/)
+    - Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+
+- [Project Dependencies](requirements.txt)
+    - There are many Python based libraries used throughout this project to enhance productivity and improve the application, these along 
+    with the installed version can be viewed in the apps [requirements file](requirements.txt).
+
+- [Stripe](https://stripe.com/en-gb)
+    - Stripe primarily offers payment processing software and application programming interfaces for e-commerce websites and mobile applications.
+
+## Testing
+
+Find all information on the testing that has been carried out for this project [here.](TESTING.md)
+
+## Deployment
+
+Find all information on the deployment of this project [here.](DEPLOYMENT.md)
+
+## Credits
