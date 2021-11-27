@@ -501,6 +501,9 @@ header {
     text-align: center;
 }
 
+.nav-item:focus,
+.nav-item:focus-visible,
+.nav-item:active
 .nav-link:focus,
 .nav-link:focus-visible,
 .nav-link:active {
