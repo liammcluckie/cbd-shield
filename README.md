@@ -2,7 +2,7 @@
 
 [View Live Project Here](#)
 
-![Screenshot of landing page on multiple devices](#)
+![Screenshot of website on multiple devices](readme-screenshots/testing/responsive-screenshot.png)
 
 ## Overview
 
@@ -143,13 +143,11 @@ CBD shield are a modern health brand producing healing products using natural in
 
     - Fully responsive website regardless of viewing device size.
 
-    - Fixed navigation bar.
-
     - Detailed information/about sections.
 
     - Detail product descriptions.
 
-    - New/special product carousels.
+    - A blog page that contains all the latest news.
 
     - Eye catching CTA's using imagery and copy. 
 
@@ -163,23 +161,22 @@ CBD shield are a modern health brand producing healing products using natural in
 
     - The ability for users to leave reviews for products and allow these users to have CRUD functionality over their own reviews.
 
-    - Testimonials of the brand and products.
-
     - This website will include pages such as;
         - Homepage
-        - Events Page
+        - Blog Page
         - Products page - organised into product types/categories
         - FAQ Page
         - Profile page
         - Register/login page
-        - Contact page
         - Relevant purchasing pages - cart, checkout etc
 
 - **The features and content in the initial design plan that are of a lower priority and may not be including in this build are;**
 
     - Related/recommended products to be displayed whilst viewing certain products.
 
-    - A blog page that contains all the latest news.
+    - Testimonials of the brand and products.
+
+    - New/special product carousels.
 
     - A gallery section containing products and these products in use.
 
@@ -197,11 +194,11 @@ CBD shield are a modern health brand producing healing products using natural in
 
 - Header/Navigation - *Top Level*
 
-    - This website will use a fixed navigation bar that hides the menu items unless the user is scrolling upwards, which will then cause the navbar to display itself in a smooth animation. The reason for this UI decision is to avoid hiding any content and cluttering of the page enhancing the UX.
+    - This website will use a standard navigation bar, there is no need for this to be a fixed navbar as there will be a back to top button implemented throughout the site for UX purposes.
 
     - The main navbar will collapse on medium screen sizes into a hamburger menu, but the functionality will remain the same.
 
-    - There will also be a sub navigation menu included that will feature a search bar allowing the user to immediately search the sites products.
+    - The navigation menu will feature a search bar allowing the user to immediately search the sites products.
 
     - The header section will include and eye catching hero image alongside information, snappy hero text that acts as a call to action. This feature will include well thought out white space and on brand colours.
 
@@ -219,11 +216,11 @@ CBD shield are a modern health brand producing healing products using natural in
 
     - The layout of the FAQ page will be in a accordion style with the FAQ title being displayed alongside an icon, then once selected the FAQ copy will be displayed.
 
-    - The events page will make use of alternative card layouts with aesthetically pleasing animation effects.
+    - The blog page will make use of alternative card layouts with aesthetically pleasing animation effects.
+
+    - Newsletter sign up form will be displayed in a cta style format that is bold and eye catching.
 
 - Footer - *Bottom Level*
-
-    - Newsletter sign up form displayed within the footer but above all other content as top priority.
 
     - A repeated navigation menu to reduce the need for the user to scroll up to continue navigating.
 
@@ -237,11 +234,11 @@ CBD shield are a modern health brand producing healing products using natural in
 
 #### Wireframes
 
-- [Desktop website view](#)
+- [Desktop website view](wireframes/cbd-shield-desktop.pdf)
 
-- [Tablet website view](#)
+- [Tablet website view](wireframes/cbd-shield-tablet.pdf)
 
-- [Mobile website view](#)
+- [Mobile website view](wireframes/cbd-shield-mobile.pdf)
 
 ## Design
 
@@ -251,9 +248,9 @@ CBD shield are a modern health brand producing healing products using natural in
 
 - Feigoa (#9AE17A) - Primary Colour - A mid tone pale green that features as the main colour in the logo. This green relates well with the type of products being sold and adds a fun, enjoyable tone to the colour palette.
 
-- Oracle (#327270) - Secondary Colour - A blue, grey and green toned colour that works exceptionally well alongside the primary colour. This colour will be used to break up sections and add contrast to important features making them stand out to the user.
+- Fern (#6BBA62) - Primary Alternate Colour - A slightly darker shade of Feigoa, this colour will be used to increase readability of copy to ensure accessability is high. As well as this it will also add slight but effective contrast when used alongside the primary colour.
 
-- Fern (#6BBA62) - Accent Colour/Primary Alternate Colour - A slightly darker shade of Feigoa, this colour will be used to increase readability of copy to ensure accessability is high. As well as this it will also add slight but effective contrast when used alongside the primary colour.
+- Oracle (#327270) - Secondary Colour - A blue, grey and green toned colour that works exceptionally well alongside the primary colour. This colour will be used to break up sections and add contrast to important features making them stand out to the user.
 
 ---
 
