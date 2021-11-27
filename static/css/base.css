@@ -501,19 +501,6 @@ header {
     text-align: center;
 }
 
-.dropdown-toggle:focus,
-.dropdown-toggle:focus-visible,
-.dropdown-toggle:active
-.nav-item:focus,
-.nav-item:focus-visible,
-.nav-item:active
-.nav-link:focus,
-.nav-link:focus-visible,
-.nav-link:active {
-    outline: none!important;
-    box-shadow: none!important;
-}
-
 .nav-item:after,
 .footer-nav-item:after {
     content: '';
