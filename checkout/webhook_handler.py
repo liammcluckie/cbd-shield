@@ -14,25 +14,25 @@ import time
 class StripeWH_Handler:
     """ Handle Stripe webhooks """
 
-    def __init__(self, request):
+    def __init__(self, request):\
         self.request = request
 
-    def _send_confirmation_email(self, order):
-        """ Send the user a confirmation email """
-        cust_email = order.email
-        subject = render_to_string(
-            'checkout/confirmation_emails/confirmation_email_subject.txt',
-            {'order': order})
-        body = render_to_string(
-            'checkout/confirmation_emails/confirmation_email_body.txt',
-            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+    # def _send_confirmation_email(self, order):
+    #     """ Send the user a confirmation email """
+    #     cust_email = order.email
+    #     subject = render_to_string(
+    #         'checkout/confirmation_emails/confirmation_email_subject.txt',
+    #         {'order': order})
+    #     body = render_to_string(
+    #         'checkout/confirmation_emails/confirmation_email_body.txt',
+    #         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
-        send_mail(
-            subject,
-            body,
-            settings.DEFAULT_FROM_EMAIL,
-            [cust_email]
-        )
+    #     send_mail(
+    #         subject,
+    #         body,
+    #         settings.DEFAULT_FROM_EMAIL,
+    #         [cust_email]
+    #     )
 
     def handle_event(self, event):
         """ Handle an error/unknown webhook event """
