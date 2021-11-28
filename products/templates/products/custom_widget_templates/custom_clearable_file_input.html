@@ -12,11 +12,8 @@
 {% endif %}
 <div class="image-input-container">
     <div class="image-input-wrapper">
-        <label class="input-button" for="new-image">Select Image</label>
-        <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
+        <label id="image-input" class="input-button" for="id_image">Select Image</label>
+        <input type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
     </div>
 </div>
-
-<strong>
-    <p id="filename"></p>
-</strong>
+<p id="filename"></p>
