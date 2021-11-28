@@ -1740,7 +1740,8 @@ header {
     left: 0;
 }
 
-.checkout-save-label > div {
+.checkout-save-label > span {
+    display: block;
     height: 15px;
     width: 15px;
     border: 2px solid var(--secondary);
@@ -1760,7 +1761,7 @@ header {
     cursor: pointer;
 }
 
-.checkout-save-input:checked + .checkout-save-label > div {
+.checkout-save-input:checked + .checkout-save-label > span {
     border-radius: 0;
     border-top: 0;
     border-left: 0;
