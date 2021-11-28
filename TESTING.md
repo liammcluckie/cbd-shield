@@ -44,7 +44,7 @@ Outlined for each page is the decision why the warnings present have not been co
     ```
     - Span elements being parents of form elements whilst being included within an anchor tag, the fix for this can be seen [here.](https://github.com/liammcluckie/cbd-shield/commit/042f4b84e556807da429498791243a5355136255?diff=unified)
     - Using django/forms/widgets/attrs.html dynamically adds an id to the element which already contained an id therefore causing an error. The full fix for this can be seen [here.](https://github.com/liammcluckie/cbd-shield/commit/eebfa558263d7d20596a06de319f0ba543ce1250)
-    - An error was caused by a poor aria label attribute value, which was due to Django templating logic defining the value of this attribute the fix invloved removing the whitespace arounf the if statement output seen [here.](https://github.com/liammcluckie/cbd-shield/commit/9140a53ac5ca5b0792d2342be1723c954ec3d8fb)
+    - An error was caused by a poor aria label attribute value, which was due to Django templating logic defining the value of this attribute the fix involved removing the whitespace around the if statement output seen [here.](https://github.com/liammcluckie/cbd-shield/commit/9140a53ac5ca5b0792d2342be1723c954ec3d8fb)
     - `<h4>` elements being descendants of `<th>` elements is not allowed, fix [here.](https://github.com/liammcluckie/cbd-shield/commit/2c3ccb4645de6e04eb452bd08c27f745573b6281)
     - `<div>` elements being descendants of `<label>` elements, fix [here.](https://github.com/liammcluckie/cbd-shield/commit/c78264f5be77a4156f398c4021aec3f4145e30b6)
     
@@ -65,3 +65,117 @@ Outlined for each page is the decision why the warnings present have not been co
 ### Python Validation
 
 - All written Python code has been ran through an online PEP8 syntax checker called [Python Checker](https://www.pythonchecker.com/) and all syntax errors that are not code style based or necessary for this specific project have been amended.
+
+## User Story Testing
+
+### User Goals
+
+- *"As a user, I want to be able to access the site from any device."*
+    - Thorough testing has been carried out to ensure this project works well on any modern device. Pictured below is this testing taking place the site [Am I responsive](http://ami.responsivedesign.is/).
+
+    ![Screenshot of the site on various sized devices](readme-screenshots/testing/responsive-screenshot.png)
+
+- *"As a user, I want to enjoy using the website through great aesthetics and a strong UX/UI."*
+    - There have been various implementations of features throughout this site to improve the UX including a 'Back to Top' button to reduce the amount of required scrolling. Two instances of 'Back' buttons in place if there is more than one click needed to navigate back to said page.
+
+    ![Back to top button](readme-screenshots/testing/back-to-top.png)
+
+    ![Back button](readme-screenshots/testing/back-btn.png)
+
+    - All clickable elements include various hover/focus animations that greatly improve the aesthetics and interaction of the site for the user. 
+
+    ![Product card hover animation](readme-screenshots/testing/product-hover.png)
+
+- *"As a user, I want to be able to find using the websites functionality simple with clear instructions."*
+    - All navigation, clickable elements, forms and content come with clear simple instructions. 
+    - Forms contain descriptive error messaged outlining the issue.
+    - The majority of functionality uses Toast messages to display success/error/warning/info messages to the user.
+
+    ![Add to cart success message](readme-screenshots/testing/cart-success.png)
+
+    ![Checkout form error](readme-screenshots/testing/checkout-form-error.png)
+
+    ![Content info description](readme-screenshots/testing/content-info.png)
+
+    ![Review form submit error](readme-screenshots/testing/review-form-error.png)
+
+- *"As a user, I want to have full control of my delivery details."*
+    - The user has the ability to update any of their account delivery details.
+
+    ![Users delivery info update form](readme-screenshots/testing/delivery-info.png)
+
+---
+
+### First Time Visitor Goals
+
+- *"As a first time visitor, I want to immediately and clearly understand the purpose of the website and the business."*
+    - The first thing a user sees is a large hero image with a tagline that shows the products in use, a call to action that includes the product and the word 'shop' and a logo that has the name of the products in it. All of these immediately tell the user they are visiting a shop that sells CBD health products.
+
+    ![Landing page hero and call to action](readme-screenshots/testing/hero.png)
+
+- *"As a first time visitor, I want to find the UI eye catching, clear and professional looking. Increasing my trust in this website."*
+    - I believe this is done throughout the site in various ways, however, one of the strongest landing page UI elements is the CBD by purpose category section. The layout is professional and the intention clear and helpful.
+
+    ![Product by purpose section](readme-screenshots/testing/product-purpose.png)
+
+- *"As a first time visitor, I want to be able to easily navigate around the site at various stages of a page through the use of call to actions."*
+    - The landing page includes three descriptive call to actions that direct the user to the main points of interest in the site. The Hero CTA which is show above, the shop products by purpose also shown above, and the FAQ CTA within the About section. This in particular will give the user all the further information they need to know.
+
+    ![Discover more FAQ link](readme-screenshots/testing/faq-link.png)
+
+- *"As a first time visitor, I want to find out more information about the products and how they work."*
+    - As well as the shop by purpose section of the products, each individual product contains a descriptive section about the product and how it is used. 
+    - The shop by purpose icons are also displayed alongside all instances of the products to enhance and improve the users understanding.
+
+    ![Product information](readme-screenshots/testing/product-info.png)
+
+---
+
+### Returning Visitor Goals
+
+- *"As a returning visitor, I want to find reviews and testimonials of the brand and products."*
+    - All products allow authenticated users to add detailed product reviews.
+
+    ![Product review example](readme-screenshots/testing/product-review.png)
+    ![Product without review example](readme-screenshots/testing/product-no-review.png)
+
+- *"As a returning visitor, I want to be about to contact the site owner if I have any issues or questions."*
+    - Any user can use the contact link in the footer navigation which acts as a `mailto:` email anchor tag, as well as this the sites contact email address is displayed within emails sent out to users.
+
+    ![Displaying the use of the contact link within footer](readme-screenshots/testing/mailto.png)
+
+    ![Order confirmation email](readme-screenshots/testing/confirmation-email.png)
+
+- *"As a returning visitor, I want to be able to sign up to a newsletter for offers and information."*
+    - Due to the importance of this feature the newsletter sign up acts as a eye catching CTA located high on the landing page. The use of a catchy title, bold colours and interesting illustrations all enhance the UI of this.
+
+    ![Newsletter feature](readme-screenshots/testing/newsletter.png)
+
+### Frequent Visitor Goals
+
+- *"As a frequent visitor, I want to find purchasing products a smooth and simple process."*
+    - This process has been as simple as possible limiting the amount of clicks needed, and having descriptive elements such as links and buttons displayed throughout each step.
+
+    ![Shopping bag update with checkout button](readme-screenshots/testing/checkout-toast-button.png)
+
+    ![Bag page buttons](readme-screenshots/testing/cart-buttons.png)
+
+    ![Checkout page account links](readme-screenshots/testing/checkout-account-links.png)
+
+    ![Adjust bag link](readme-screenshots/testing/adjust-bag-link.png)
+
+- *"As a frequent visitor, I want to be able to create a profile and save my details for future purchases."*
+    - If the user is not authenticated at the checkout stage they can follow the links to sign in or register. Once complete an interactive checkbox will be displayed allowing the user to save their details.
+
+    ![Checkout save delivery details checkbox](readme-screenshots/testing/checkbox-profile-save.png)
+
+- *"As a frequent visitor, I want to see all my previous and current order history."*
+    - On the users profile page they can see all of their previous orders in a compact UI please table that contains a link to view the order in more detail if they choose.
+
+    ![Profile order history table](readme-screenshots/testing/order-history-link.png)
+
+    ![Detailed previous order history page](readme-screenshots/testing/order-history-detail.png)
+
+- *"As a frequent visitor, I want to receive email confirmations with order details upon purchasing products."*
+    - Users receive a detailed confirmation email that includes their order and the delivery address, an example of this can be seen above.
+
