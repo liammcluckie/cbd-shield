@@ -30,9 +30,9 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2 col-12 mt-4">
                     {% if blog.image %}
-                        <img src="{{ blog.image.url }}" alt="Image representing blog post - {{ blog.title }}" class="blog-overview-image">
+                        <img src="{{ blog.image.url }}" alt="Image representing blog post - {{ blog.title }}" class="blog-single-image">
                     {% else %}
-                        <img src="{{ MEDIA_URL }}noimage.png" alt="No image of blog post available" class="blog-overview-image">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="No image of blog post available" class="blog-single-image">
                     {% endif %} 
                 </div>
             </div>
