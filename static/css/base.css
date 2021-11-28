@@ -1418,8 +1418,9 @@ header {
     border-bottom: 2px solid var(--secondary);
 }
 
-.cart-header > th > h4 {
+.cart-th-header {
     font-weight: bold;
+    font-size: 1.5rem
 }
 
 .cart-body > tr > td > p {
