@@ -62,15 +62,11 @@ CBD shield are a modern health brand producing healing products using natural in
 
     a. As a user, I want to be able to access the site from any device.
 
-    b. As a user, I want to know that my personal information is safe and stored securely on a database.
+    b. As a user, I want to enjoy using the website through great aesthetics and a strong UX/UI.
 
-    c. As a user, I want to enjoy using the website through great aesthetics and a strong UX/UI.
+    c. As a user, I want to be able to find using the websites functionality simple with clear instructions.
 
-    d. As a user, I want to be able to find using the websites functionality simple with clear instructions.
-
-    e. As a user, I want to have full control of my account following computer programming CRUD (create, read, update & delete) operations.
-
-    f. As a user, I want to know that I am able to complete payments securely and my details are safe.
+    d. As a user, I want to have full control of my delivery details.
 
 - **First Time Visitor Goals**
 
@@ -86,11 +82,9 @@ CBD shield are a modern health brand producing healing products using natural in
 
     a. As a returning visitor, I want to find reviews and testimonials of the brand and products.
 
-    b. As a returning visitor, I want to find out detailed information about specific products.
+    b. As a returning visitor, I want to be about to contact the site owner if I have any issues or questions.
 
-    c. As a returning visitor, I want to be about to contact the site owner if I have any issues or questions.
-
-    d. As a returning visitor, I want to be able to sign up to a newsletter for offers and information.
+    c. As a returning visitor, I want to be able to sign up to a newsletter for offers and information.
 
 - **Frequent Visitor Goals**
 
@@ -100,9 +94,7 @@ CBD shield are a modern health brand producing healing products using natural in
 
     c. As a frequent visitor, I want to see all my previous and current order history.
 
-    d. As a frequent visitor, I want to see new products and offers listed on the home page.
-
-    e. As a frequent visitor, I want to receive email confirmations with order details upon purchasing products.
+    d. As a frequent visitor, I want to receive email confirmations with order details upon purchasing products.
 
 ---
 
@@ -481,6 +473,9 @@ improve the UX of the site.
 - [JSHint](https://jshint.com/)
     - This is a tool used to detect errors or potential problems within Javascript code, it was used to test and validate all Javascript written for this project.
 
+- [Python Checker](https://www.pythonchecker.com/)
+    - An online Python PEP8 syntax checker. This was used as the PEP8 extensions attempted to use in IDE did not work.
+
 - [CSS Autoprefixer](https://autoprefixer.github.io/)
     - This was used to add vendor prefixes to the CSS used in the project to increase cross browser compatibility.
 
@@ -515,3 +510,152 @@ Find all information on the testing that has been carried out for this project [
 Find all information on the deployment of this project [here.](DEPLOYMENT.md)
 
 ## Credits
+
+### Resources
+
+- [Unsplash](https://unsplash.com/)
+    - Most of the images used for this project were taken from here with the owners permission.
+
+- [SVG's](https://www.123rf.com/)
+    - The SVG illustrations used are taken with permission from 123rf.
+
+- [Stack Overflow](https://stackoverflow.com/)
+    - This was used to help troubleshoot and overcome many of the problems and bugs encountered whilst building this project.
+
+- [w3 Schools](https://www.w3schools.com/)
+    - An educational website containing example code and documentation on all syntax for web development, another paramount tool for problem solving during this project.
+
+- [MDN](https://developer.mozilla.org/)
+    - Used for various code based documentation to overcome issues and aid in decision making for implementations.
+
+- [Django Documentation](https://docs.djangoproject.com/en/3.2/)
+    - For packages and general framework documentation.
+
+- [Code Institute](https://codeinstitute.net/)
+    - The functionality for this project took great inspiration from Code Institutes Boutique Ado Project.
+
+---
+
+### Code
+
+Listed below is any code that was taken from external resources and customised for this project, this is also referenced in the specific webpage files.
+
+- Navigation, Accordion, Table - [Bootstrap](https://getbootstrap.com/)
+
+- [Box Shadows](https://getcssscan.com/css-box-shadow-examples)
+
+- [Search Bar](https://codepen.io/ShortCode/pen/jOrBeOw)
+
+- [Button Icon Animation](https://codepen.io/foxeisen/pen/bqZxLa)
+
+- [Hamburger Animation](https://www.udemy.com/course/sass-the-complete-sass-course-css-preprocessor/)
+
+- [Save Details Checkbox](https://codepen.io/sderoij/pen/VvJJwE)
+
+- [Stripe Elements](https://stripe.com/docs/payments/accept-a-payment)
+
+- [Loading Animation](https://blog.hubspot.com/website/css-loading-animation)
+
+- [Toast Messages](readme-screenshots/testing/toast-code.png)
+
+---
+
+### Media
+
+**Logo**
+
+- The logo for this website was generated using [Hatchful](https://hatchful.shopify.com/). This works by inputting the name of the brand/business and by choosing certain style preferences, this then produces a selection of different logo ideas.
+
+**Images**
+
+- [Hero Product Image](https://pixabay.com/users/erin_hinterland-17114308/)
+
+- [Hero Image](https://unsplash.com/@enecta)
+
+- [About section](https://unsplash.com/@pachamamacbd)
+
+- [Blog Post Sleep](https://unsplash.com/@brucemars)
+
+- [Blog Post Benefits](https://unsplash.com/@crystalweed)
+
+- [Blog Post Arthritis](https://unsplash.com/@towfiqu999999)
+
+- [Products Bath Salts](https://unsplash.com/@apothecary87)
+
+- [Products Rollerball Massage](https://unsplash.com/@batch_by_whs)
+
+- [Vegan Immune Booster Gummies](https://unsplash.com/@batch_by_whs)
+
+- [Muscle & Rub Balm](https://unsplash.com/@batch_by_whs)
+
+- [Tranquil Tea](https://unsplash.com/@canndid)
+
+- [Wild Strawberry Vape](https://unsplash.com/@clearcannabis)
+
+- [Coffee Syrup](https://unsplash.com/@commonboxturtle)
+
+- [Raw Cannabis Oil Drops](https://unsplash.com/@crystalweed)
+
+- [Pain Cream](https://unsplash.com/@elsaolofsson)
+
+- [Turmeric Soft Shells](https://unsplash.com/@batch_by_whs)
+
+- [Sublingual Oil](https://unsplash.com/@elsaolofsson)
+
+- [Immunity Booster](https://unsplash.com/@elsaolofsson)
+
+- [Roll on Pain Freeze](https://unsplash.com/@elsaolofsson)
+
+- [Lip Balm](https://unsplash.com/@enecta)
+
+- [Skin Patches](https://unsplash.com/@herbadea)
+
+- [Anti-aging Cream](https://unsplash.com/@inspectorcbd)
+
+- [Whole Coffee Beans](https://unsplash.com/@buddhabeans)
+
+- [Bubble Bath Lotion](https://unsplash.com/@mathildelangevin)
+
+- [Coconut Body Butter](https://unsplash.com/@mathildelangevin)
+
+- [Hemp Protein Powder](https://unsplash.com/@nature_zen)
+
+- [Pre-workout Energy Shakes](https://unsplash.com/@nature_zen)
+
+- [Night Cream](https://unsplash.com/@noratopicals)
+
+- [Bath Bomb](https://unsplash.com/@pharmahempcomplex)
+
+- [Herbal Spray](https://unsplash.com/@pharmahempcomplex)
+
+- [Coarse Ground Coffee](https://unsplash.com/@pothead_coffee)
+
+- [Hand Cream](https://unsplash.com/@rrmedicinals)
+
+- [Morning Capsules](https://unsplash.com/@rrmedicinals)
+
+- [Pro Gummies](https://unsplash.com/@resiliencecbd)
+
+- [Night Time Tincture](https://unsplash.com/@slumbercbn)
+
+- [Calm Drop](https://unsplash.com/@slumbercbn)
+
+- [Muscle & Joint Balm](https://unsplash.com/@hempurecbd)
+
+- [Wellness Tincture](https://unsplash.com/@stefantakespictures)
+
+- [Oil Candle](https://unsplash.com/@allthestories)
+
+- [Herbal Tea](https://unsplash.com/@testeurdecbd)
+
+- [Face Masks](https://unsplash.com/@heftiba)
+
+**Content**
+
+The following Blog content as been taken from the following sites.
+
+- [Sleep Post](https://www.sleepfoundation.org/how-sleep-works/)
+
+- [Benefits Post](https://www.healthline.com/nutrition/cbd-oil-benefits#TOC_TITLE_HDR_4)
+
+- [Arthritis Post](https://www.arthritis.org/health-wellness/healthy-living/managing-pain/pain-relief-solutions/cbd-for-arthritis-pain)
