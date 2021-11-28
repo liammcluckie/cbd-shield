@@ -185,15 +185,15 @@ Outlined for each page is the decision why the warnings present have not been co
 
     **Ipad Air**
 
-    ![Image of live site on an Ipad Air](readme-screenshots/testing/ipad.png)
+    ![Image of live site on an Ipad Air](readme-screenshots/testing/ipad.jpg)
     
     **Iphone 12 Mini**
 
-    ![Image of live site viewed on a Iphone 12 Mini](readme-screenshots/testing/iphone-12.png)
+    ![Image of live site viewed on a Iphone 12 Mini](readme-screenshots/testing/iphone-12.jpg)
 
     **Iphone 11**
 
-    ![Image of live site viewed on a Iphone 11](readme-screenshots/testing/iphone-11.png)
+    ![Image of live site viewed on a Iphone 11](readme-screenshots/testing/iphone-11.jpg)
 
 
 Once the project was completed a cross browser compatibility test on five different browsers was carried out using a web based application [BrowserStack](https://www.browserstack.com/). I also checked this by downloading the browsers that were available to further ensure testing was thorough.
