@@ -1297,6 +1297,19 @@ header {
     }
 }
 
+@media (max-width: 800px) {
+    /* Remove hover animation on md & sm */
+    .custom-card:hover .card-content--first,
+    .custom-card:focus .card-content--first {
+        margin-top: 0
+    }
+
+    .custom-card:hover .card-content,
+    .custom-card:focus .card-content {
+        background-color: var(--white);
+    }
+}
+
 @media (max-width: 370px) {
     .product-category-badge {
         width: 3rem;
@@ -1535,6 +1548,10 @@ header {
 @media (max-width: 1200px) {
     .col-sidebar {
         background-size: 22rem;
+    }
+
+    .col-sidebar--clear {
+        background-size: 40%;
     }
 
     .cart-sidebar > h5 > span,
@@ -1851,8 +1868,7 @@ header {
 /* Order Success */
 
 .order-header-message {
-    color: var(--white);
-    margin: 2rem 0;
+    margin-bottom: 2rem;
     font-family: var(--body);
 }
 
@@ -1885,15 +1901,16 @@ header {
 
 #loading-overlay {
     position: absolute;
-    inset: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: none;
     z-index: 900;
-    margin: auto;
     border: 20px solid var(--primary);
     border-radius: 50%;
     border-top: 20px solid var(--white);
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     animation: spinner 4s linear infinite;
 }
 
@@ -1911,6 +1928,38 @@ header {
     filter: blur(10px);
     position: relative;
     z-index: 900;
+}
+
+@media (max-width: 1380px) {
+    #loading-overlay {
+        left: 45%;
+        top: 40%
+    }
+}
+
+@media (max-width: 800px) {
+    #loading-overlay {
+        left: 40%;
+        top: 40%
+    }
+}
+
+@media (max-width: 600px) {
+    #loading-overlay {
+        left: 35%;
+    }
+}
+
+@media (max-width: 420px) {
+    #loading-overlay {
+        left: 25%;
+    }
+}
+
+@media (max-width: 315px) {
+    #loading-overlay {
+        left: 15%;
+    }
 }
 
 /* Allauth forms */
@@ -2239,8 +2288,7 @@ header {
 @media (max-width: 992px) {
     .blog-overview-image {
         width: 100%;
-        height: auto;
-        object-fit: unset;
+        height: 20rem;
     }
 }
 
@@ -2251,6 +2299,10 @@ header {
 }
 
 @media (max-width: 500px) {
+    .blog-overview-image {
+        height: 12rem;
+    }
+
     .blog-title {
         font-size: 1.75rem;
     }
@@ -2439,6 +2491,18 @@ footer img {
     }
 }
 
+@media (max-width: 800px) {
+    .footer-nav-item:after {
+        background-color: var(--white);
+    }
+
+    .footer-nav-item:hover:after,
+    .footer-nav-item:focus:after {
+        transform: unset;
+        transform-origin: unset;
+    }
+}
+
 @media (max-width: 767px) {
     footer img {
         width: 50%;
@@ -2467,6 +2531,11 @@ footer img {
 @media (max-width: 480px) {
     footer img {
         width: 100%;
+    }
+
+    .footer-nav-item {
+        font-size: 1.25rem;
+        line-height: 2;
     }
 }
 
