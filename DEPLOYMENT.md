@@ -8,8 +8,10 @@
 
 ### 3. [Amazon Web Services](#aws)
 
+### 4. [Github](#github)
 
-### Version Control
+
+## Version Control
 
 - This project was built using [GitPod](https://gitpod.io/workspaces/) as the code editor.
 
@@ -21,9 +23,7 @@
 
 ![Git Graph code editor plugin displaying version control of this project](readme-screenshots/git-graph.png)
 
----
-
-### Heroku 
+## Heroku 
 
 This project is live and automatically deployed to [Heroku](https://www.heroku.com). The following steps outline the necessary steps to set-up and deploy a project that uses Python and Django.
 
@@ -104,9 +104,7 @@ This project is live and automatically deployed to [Heroku](https://www.heroku.c
 
 13. Once connected scroll further down the same page and on the 'Automatic Deploys' section and choose the 'Enable Automatic Deploys' button to finish setting this up. 
 
----
-
-### AWS
+## AWS
 
 This project uses Amazon Web Services to host all static files and media files. The following steps will allow you to set up and configure this with the already deployed Heroku App, completing the deployment process.
 
@@ -237,3 +235,37 @@ Then check that 'storages' is included in the installed apps in the projects set
 ![Screenshot showing the above instruction](readme-screenshots/deployment/a-deploy-11.png)
 
 You can now select to reveal the webhook signing secret and add this to the Heroku config vars named `STRIPE_WH_SECRET`.
+
+## Github
+
+### Forking the Repository
+
+This project is available to be copied and edited by other users without changing the repository on the original GitHub account. This can be done by forking the entire repository by following these steps, the instructional images contain a black box around the specified area.
+
+1. Log in to [GitHub](https://github.com/) and locate the [repository](https://github.com/liammcluckie/cbd-shield).
+
+    - Alternatively you can locate the repository by searching liammcluckie/cbd-shield on [GitHub](https://github.com/).
+
+2. At the top of the repository page, below your own account icon you will find three buttons one of these is labelled 'Fork' click here.
+
+    ![Screenshot of the 'fork' button found in Github](readme-screenshots/deployment/f-deploy-1.png)
+
+3. You will now have a copy of the entire repository in your own GitHub account to edit and make changes too.
+
+4. If any suggestions, improvements or changes have been made that you would wish to share to improve the original site you can then submit a pull request to myself, details on how to do this can be found [here](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork).
+
+### Making a Local Clone
+
+1. Log in to [GitHub](https://github.com/) and locate the [repository](https://github.com/liammcluckie/cbd-shield).
+
+    - Alternatively you can locate the repository by searching liammcluckie/cbd-shield on [GitHub](https://github.com/).
+
+2. Located directly above the repository files and to the left of the green 'GitPod' button is a 'Code' button click on this.
+
+    ![Screenshot example of following the above step](readme-screenshots/deployment/c-deploy-1.png)
+
+4. Next open your own terminal in GitPod and change the current directory to where you want the cloned directory to be sent to.
+
+5. In the terminal type `git clone` and then paste the URL copied from the original repository and press enter. This will create your local clone.
+
+6. If you use GitHub desktop the instructions on how to clone to this can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop).
