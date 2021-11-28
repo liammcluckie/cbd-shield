@@ -217,3 +217,43 @@ Poor - Website still functions correctly but key elements do not appear as inten
     ```
 
 ## Google Lighthouse Testing
+
+- Once this project was deployed a test for mobile and web was carried out for all pages using Google Developer Tools Lighthouse application and [Page Speed Insights](https://pagespeed.web.dev/). 
+
+- Focusing on the performance scores produced there are some changes that will be made, however, it is out of the scope of this current project and will be completed in future builds. The steps will be as follows.
+
+    - Introduce Lazy loading of all images causing the images to only load once within the users viewport, this will increase initial load time of the site.
+    - Run all javascript and css through a minifier package to make the file size as small as possible.
+    - Host images on a platform that allows the use of WebP to serve images in next generation formats.
+
+    ![Screenshot of performance test on mobile](readme-screenshots/testing/perf-test-mobile.png)
+
+    ![Screenshot of performance test on desktop](readme-screenshots/testing/perf-test-desktop.png)
+
+## Bugs
+
+Listed below are the major bugs that I encountered whilst building this project and how I resolved them.
+
+1. One of the major functionality bugs that happened was the Order total not correctly updating once the payment had gone through. The payment amount was correct, however, the order in the system, the users order history, checkout success page and confirmation email were all incorrect. 
+
+    This was odd to me as initially I believed it to be an issue with how the total was being calculated in the checkout `views.py` file, but whilst de-bugging and commenting out certain parts of the calculation everything seemed to be working correctly.
+
+    Whilst continuing the de-bugging process I started to print out stored variables to the terminal, at this point I noticed that the `order_line_item` value being printed was 0.
+
+    At this point I noticed that in the `signals.py` file the `sender` variable value was `sender=OrderLineItem()` by removing the incorrectly added parenthesis this fixed the bug.
+
+2. Whilst implementing Bootstraps accordion component in the FAQ page I ran into some difficulty in the functionality using it with dynamic content.
+
+    The functionality that was not correctly working was getting the desired accordion row to collapse when the relevant title row was selected. Upon inspecting and researching how the component functioned I noticed that the button attributes needed to correctly correspond to the matching `<div>` attributes.
+
+    The fix for this was to add an item id number to the FAQ models in the admin dashboard. By assigning unique numbers to each FAQ I could then use this within Django templating syntax in order for the correct attributes to match. The code is below.
+
+    ![The FAQ bug discussed above](readme-screenshots/testing/faq-bug.png)
+
+3. When implementing the newsletter form action and functionality everything was working successfully with no error messages present, however, in the users email field within the Newsletter model the number of email address fields was correct but no email value was being displayed.
+
+    ![The newsletter bug discussed above](readme-screenshots/testing/newsletter-bug.png)
+
+    Upon further investigation I finally noticed that the email input was missing the `name` attribute which explained why the form was submitting correctly with no errors, but, there were no value's being stored in the Model since the function was not told to `GET` the name value.
+
+[Return to ReadMe file](README.md)
