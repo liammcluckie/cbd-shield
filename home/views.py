@@ -33,7 +33,8 @@ def add_user_signup(request):
             'home/welcome_email/welcome_email_subject.txt')
         body = render_to_string(
             'home/welcome_email/welcome_email_body.txt',
-            {'user_email': user_email, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+            {'user_email': user_email,
+                'contact_email': settings.DEFAULT_FROM_EMAIL})
         send_mail(
             subject,
             body,
