@@ -11,8 +11,10 @@ class ProductReview(models.Model):
     Create product review fields
     Retrieve product and user Foreign Keys
     """
-    product = models.ForeignKey(Product, related_name="reviews", on_delete=models.CASCADE)
-    user = models.ForeignKey(User, related_name="reviews", on_delete=models.CASCADE)
+    product = models.ForeignKey(
+        Product, related_name="reviews", on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        User, related_name="reviews", on_delete=models.CASCADE)
 
     content = models.TextField(blank=True, null=True)
     stars = models.IntegerField()
