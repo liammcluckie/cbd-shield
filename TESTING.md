@@ -179,3 +179,41 @@ Outlined for each page is the decision why the warnings present have not been co
 - *"As a frequent visitor, I want to receive email confirmations with order details upon purchasing products."*
     - Users receive a detailed confirmation email that includes their order and the delivery address, an example of this can be seen above.
 
+## Browser Compatibility and Device Responsiveness Testing
+
+- This project was tested throughout the build on various device types and sizes using Google Chrome Developer Tools as well as other web based applications mentioned in the ReadMe document such as [Am I Responsive](http://ami.responsivedesign.is/) and [Responsinator](http://www.responsinator.com/) to ensure fluid and error free responsive design. The deployed website was also continually tested on real devices such as an Ipad Air 1st generation, Iphone 12 mini and Iphone 11.
+
+    **Ipad Air**
+
+    ![Image of live site on an Ipad Air](readme-screenshots/testing/ipad.png)
+    
+    **Iphone 12 Mini**
+
+    ![Image of live site viewed on a Iphone 12 Mini](readme-screenshots/testing/iphone-12.png)
+
+    **Iphone 11**
+
+    ![Image of live site viewed on a Iphone 11](readme-screenshots/testing/iphone-11.png)
+
+
+Once the project was completed a cross browser compatibility test on five different browsers was carried out using a web based application [BrowserStack](https://www.browserstack.com/). I also checked this by downloading the browsers that were available to further ensure testing was thorough.
+
+This table in the pdf below shows how all the projects pages responded on different device screen sizes and being used on various browsers, the grading key is as follows;
+
+Good - Appears exactly as intended aesthetically and functionally
+
+OK - Appears as intended functionally but some aesthetics may have slightly altered
+
+Poor - Website still functions correctly but key elements do not appear as intended
+
+[See file here.](readme-screenshots/testing/cross-browser-test.pdf)
+
+- Referenced in the above document there was a bug found when testing in Safari on the blog page of the blog image height being overly large. I believe this was being caused by using the `object-fit: cover` alongside `height: 100%` on the image. This has been fixed by adding `position: relative` to the image container the below code which fixed the bug. 
+
+    ```
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    ```
+
+## Google Lighthouse Testing
