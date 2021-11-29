@@ -245,6 +245,10 @@ CBD shield are a modern health brand producing healing products using natural in
 
 - Oracle (#327270) - Secondary Colour - A blue, grey and green toned colour that works exceptionally well alongside the primary colour. This colour will be used to break up sections and add contrast to important features making them stand out to the user.
 
+-  Soft Red (#f25c66) - Error/Danger Colour - Used as a warning indicator for the user whenever they are making irreversible changes or an error has occurred within a form or some functionality.
+
+- Honey Dew (#fbfefa) - Body colour - The colour for the body of the site, a slightly creamy white colour. This has been used to give small, effective contrast to any elements within the site that use a standard #fff white colour.
+
 ---
 
 ### Typography
